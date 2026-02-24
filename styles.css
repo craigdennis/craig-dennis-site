@@ -217,6 +217,23 @@ em { font-style: italic; }
   font-weight: 700;
 }
 .bullet-list li { margin-bottom: 0.35rem; }
+.cross-list {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.5rem;
+  list-style: none;
+}
+.cross-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.cross-list li::before {
+  content: "✖";
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
 
 /* --- Steps --- */
 .step {
