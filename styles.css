@@ -403,6 +403,16 @@ em { font-style: italic; }
 .framework-block p { margin: 0 0 0.5rem; }
 .framework-block .bullet-list, .framework-block .check-list { margin: 0.5rem 0 0; }
 
+/* Hero headshot (case-study pages) */
+.hero-headshot {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.25rem;
+  border: 2px solid var(--border);
+}
+
 /* Hero with dual CTA */
 .hero-cta-row {
   display: flex;
