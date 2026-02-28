@@ -121,7 +121,7 @@
       <a href="../" class="font-bold text-xl tracking-tight text-white hover:text-gray-200">craigdennis.me</a>
       <nav class="hidden md:flex gap-4">
         <a class="btn-primary text-sm" href="#case-study">View Case Study</a>
-        <a class="btn-secondary text-sm" href="Craig-Dennis-SEO-CV-Case-Study.pdf" download="Craig-Dennis-SEO-CV-Case-Study.pdf">Download SEO CV</a>
+        <a class="btn-secondary text-sm" href="/seo-architecture/Craig-Dennis-SEO-CV-Case-Study.pdf" download="Craig-Dennis-SEO-CV-Case-Study.pdf">Download SEO CV</a>
       </nav>
     </div>
   </header>
@@ -162,7 +162,7 @@
         </div>
         <div class="flex flex-col sm:flex-row gap-4">
           <a class="btn-primary" href="#case-study">View Case Study</a>
-          <a class="btn-secondary" href="Craig-Dennis-SEO-CV-Case-Study.pdf" download="Craig-Dennis-SEO-CV-Case-Study.pdf">Download SEO CV</a>
+          <a class="btn-secondary" href="/seo-architecture/Craig-Dennis-SEO-CV-Case-Study.pdf" download="Craig-Dennis-SEO-CV-Case-Study.pdf">Download SEO CV</a>
         </div>
       </div>
     </section>
@@ -313,7 +313,7 @@
             </div>
           </div>
           <div class="mt-12 text-center">
-            <a class="btn-primary w-full md:w-auto" href="Craig-Dennis-SEO-CV-Case-Study.pdf" download="Craig-Dennis-SEO-CV-Case-Study.pdf">View Full Case Study</a>
+            <a class="btn-primary w-full md:w-auto" href="/seo-architecture/Craig-Dennis-SEO-CV-Case-Study.pdf" download="Craig-Dennis-SEO-CV-Case-Study.pdf">View Full Case Study</a>
           </div>
         </div>
       </div>
@@ -378,7 +378,7 @@
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <a class="btn-primary px-8 py-4 text-lg" href="https://calendly.com/craigdennis1990/1-1-consultation" target="_blank" rel="noopener">Start a Conversation</a>
-          <a class="btn-secondary px-8 py-4 text-lg" href="Craig-Dennis-SEO-CV-Case-Study.pdf" download="Craig-Dennis-SEO-CV-Case-Study.pdf">Download SEO CV</a>
+          <a class="btn-secondary px-8 py-4 text-lg" href="/seo-architecture/Craig-Dennis-SEO-CV-Case-Study.pdf" download="Craig-Dennis-SEO-CV-Case-Study.pdf">Download SEO CV</a>
         </div>
       </div>
     </section>
@@ -393,5 +393,24 @@
     </div>
   </footer>
   <!-- END: Footer -->
+
+  <!-- #region agent log -->
+  <script>
+  (function() {
+    var pdfHref = 'Craig-Dennis-SEO-CV-Case-Study.pdf';
+    var fullUrl = new URL(pdfHref, window.location.href).href;
+    fetch(fullUrl, { method: 'HEAD' }).then(function(r) {
+      fetch('http://127.0.0.1:7247/ingest/b8faa902-2e19-4570-b116-b40b49c1f740', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ hypothesisId: 'H1_H2', location: 'seo-architecture/index.html:onload', message: 'PDF reachability', data: { fullUrl: fullUrl, status: r.status, ok: r.ok, protocol: window.location.protocol, origin: window.location.origin }, timestamp: Date.now() }) }).catch(function() {});
+    }).catch(function(err) {
+      fetch('http://127.0.0.1:7247/ingest/b8faa902-2e19-4570-b116-b40b49c1f740', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ hypothesisId: 'H1_H2', location: 'seo-architecture/index.html:onload', message: 'PDF fetch failed', data: { fullUrl: fullUrl, error: String(err && err.message || err), protocol: window.location.protocol }, timestamp: Date.now() }) }).catch(function() {});
+    });
+    document.addEventListener('click', function(e) {
+      var t = e.target.closest('a[href*="Craig-Dennis-SEO-CV"], a[download]');
+      if (!t || t.href.indexOf('Craig-Dennis-SEO-CV') === -1) return;
+      fetch('http://127.0.0.1:7247/ingest/b8faa902-2e19-4570-b116-b40b49c1f740', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ hypothesisId: 'H3_H5', location: 'seo-architecture/index.html:click', message: 'Download link clicked', data: { linkHref: t.getAttribute('href'), resolvedHref: t.href, protocol: window.location.protocol }, timestamp: Date.now() }) }).catch(function() {});
+    }, true);
+  })();
+  </script>
+  <!-- #endregion agent log -->
 </body>
 </html>

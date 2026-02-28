@@ -1,0 +1,2 @@
+{"hypothesisId":"H1_H2","location":"seo-architecture/index.html:onload","message":"PDF reachability","data":{"fullUrl":"http://localhost:3000/Craig-Dennis-SEO-CV-Case-Study.pdf","status":404,"ok":false,"protocol":"http:","origin":"http://localhost:3000"},"timestamp":1772286515644}
+{"hypothesisId":"H3_H5","location":"seo-architecture/index.html:click","message":"Download link clicked","data":{"linkHref":"Craig-Dennis-SEO-CV-Case-Study.pdf","resolvedHref":"http://localhost:3000/Craig-Dennis-SEO-CV-Case-Study.pdf","protocol":"http:"},"timestamp":1772286520712}
