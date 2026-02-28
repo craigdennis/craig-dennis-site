@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NB3JHD14FK"></script>
   <script>
@@ -13,133 +13,185 @@
   </script>
   <meta name="description" content="Content turned into a revenue engine — 600+ leads from one asset. Research-driven demand, case study production, content operations. For Content Directors, VP Marketing, Heads of Demand." />
   <title>Content & Demand Generation Engine — Craig Dennis</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css" />
+  <!-- Tailwind CSS V3 CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#257bf4',
+            brandYellow: '#f4b825',
+            darkBg: '#0a0a0a',
+            cardBg: '#141414',
+            accentBg: '#1a1a1a'
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          borderRadius: { 'custom': '8px' }
+        }
+      }
+    }
+  </script>
+  <style data-purpose="custom-typography">
+    body { background-color: #0a0a0a; color: #e5e5e5; font-family: 'Inter', sans-serif; line-height: 1.6; }
+    h1, h2, h3, h4 { color: #ffffff; letter-spacing: -0.02em; }
+    .text-balance { text-wrap: balance; }
+  </style>
+  <style data-purpose="layout-components">
+    .section-container { max-width: 800px; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+    .btn-primary { background-color: #f4b825; color: #000000; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; }
+    .btn-primary:hover { background-color: #e2a81f; transform: translateY(-1px); }
+    .btn-secondary { background-color: transparent; border: 1px solid #f4b825; color: #f4b825; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; }
+    .btn-secondary:hover { background-color: rgba(244, 184, 37, 0.1); }
+    .quote-block { border-left: 4px solid #f4b825; padding-left: 1.5rem; background-color: #141414; padding: 1.5rem; border-radius: 0 8px 8px 0; }
+    .metric-card { background-color: #141414; border: 1px solid #262626; padding: 1.5rem; border-radius: 8px; text-align: center; }
+  </style>
 </head>
-<body class="case-study-page">
-  <header class="site-header-minimal">
-    <div class="wrap">
-      <a href="../" class="logo">craigdennis.me</a>
+<body class="antialiased">
+  <header class="py-6 border-b border-white/5 sticky top-0 bg-darkBg/80 backdrop-blur-md z-50">
+    <div class="section-container flex justify-between items-center">
+      <a href="../" class="font-bold text-xl tracking-tight text-white hover:text-gray-200">craigdennis.me</a>
+      <nav class="hidden md:flex gap-4">
+        <a class="btn-primary text-sm" href="#what-i-built">View How It Works</a>
+        <a class="btn-secondary text-sm" href="#download-cv">Download Content CV</a>
+      </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero" id="hero">
-      <div class="wrap">
-        <img src="../images/headshot.jpeg" alt="Craig Dennis" class="hero-headshot" width="120" height="120" />
-        <p class="hero-label">Content & Demand Generation Engine</p>
-        <h1 class="hero-title">Turned Content Into a Revenue Engine (600+ Leads From One Asset)</h1>
-        <p class="hero-lead">I turn content into a predictable acquisition channel.</p>
-        <div class="hero-cta-row">
-          <a href="#what-i-built" class="btn btn-primary">View How It Works</a>
-          <a href="#download-cv" class="btn btn-primary" target="_blank" rel="noopener">Download Content CV</a>
+    <section class="pt-20 pb-16 md:pt-32 md:pb-24">
+      <div class="section-container">
+        <div class="mb-8">
+          <img alt="Craig Dennis Profile" class="w-20 h-20 rounded-full border-2 border-brandYellow object-cover" src="../images/headshot.jpeg" width="80" height="80"/>
+        </div>
+        <p class="text-brandYellow font-mono text-xs uppercase tracking-widest mb-4">Content &amp; Demand Generation Engine</p>
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-balance">
+          Turned Content Into a Revenue Engine (600+ Leads From One Asset)
+        </h1>
+        <p class="text-lg text-gray-400 mb-8 max-w-2xl">
+          I turn content into a predictable acquisition channel.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          <div class="metric-card md:col-span-2">
+            <span class="block text-2xl font-bold text-brandYellow">600+</span>
+            <span class="text-xs text-gray-500 uppercase">Leads from one asset</span>
+          </div>
+          <div class="metric-card">
+            <span class="block text-2xl font-bold text-brandYellow">648</span>
+            <span class="text-xs text-gray-500 uppercase">One research campaign</span>
+          </div>
+          <div class="metric-card">
+            <span class="block text-2xl font-bold text-brandYellow">Multi-channel</span>
+            <span class="text-xs text-gray-500 uppercase">Demand</span>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a class="btn-primary" href="#what-i-built">View How It Works</a>
+          <a class="btn-secondary" href="#download-cv">Download Content CV</a>
         </div>
       </div>
     </section>
 
-    <aside class="sticky-cta" aria-label="Quick actions">
-      <div class="wrap">
-        <a href="#what-i-built" class="btn btn-primary">View How It Works</a>
-        <a href="#download-cv" class="btn btn-primary" target="_blank" rel="noopener">Download Content CV</a>
-      </div>
-    </aside>
+    <section class="py-20 bg-accentBg" id="what-i-built">
+      <div class="section-container">
+        <h2 class="text-3xl font-bold mb-12">What I Built</h2>
 
-    <section class="section" id="what-i-built">
-      <div class="wrap">
-        <h2 class="section-title">What I Built</h2>
-
-        <h3 class="sub-title">Research-Driven Demand Engine</h3>
-        <p class="section-lead">Proprietary research, SEO-aligned distribution, and sales amplification — built to generate pipeline, not just traffic.</p>
-        <div class="framework-grid">
-          <div class="framework-block">
-            <h4 class="framework-block__title">Proprietary research</h4>
-            <p>Original data and insights that earn backlinks, press, and sales conversations. Built for credibility and conversion.</p>
+        <h3 class="text-xl font-bold mb-4 text-white">Research-Driven Demand Engine</h3>
+        <p class="text-gray-400 mb-6">Proprietary research, SEO-aligned distribution, and sales amplification — built to generate pipeline, not just traffic.</p>
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-cardBg border border-white/10 p-6 rounded-custom">
+            <h4 class="text-brandYellow font-bold mb-2">Proprietary research</h4>
+            <p class="text-gray-400 text-sm">Original data and insights that earn backlinks, press, and sales conversations. Built for credibility and conversion.</p>
           </div>
-          <div class="framework-block">
-            <h4 class="framework-block__title">SEO alignment</h4>
-            <p>Research themes and formats chosen to rank and to support bottom-funnel capture and opportunity creation.</p>
+          <div class="bg-cardBg border border-white/10 p-6 rounded-custom">
+            <h4 class="text-brandYellow font-bold mb-2">SEO alignment</h4>
+            <p class="text-gray-400 text-sm">Research themes and formats chosen to rank and to support bottom-funnel capture and opportunity creation.</p>
           </div>
-          <div class="framework-block">
-            <h4 class="framework-block__title">LinkedIn distribution</h4>
-            <p>Structured rollout so content reaches decision-makers and feeds into pipeline, not just engagement.</p>
+          <div class="bg-cardBg border border-white/10 p-6 rounded-custom">
+            <h4 class="text-brandYellow font-bold mb-2">LinkedIn distribution</h4>
+            <p class="text-gray-400 text-sm">Structured rollout so content reaches decision-makers and feeds into pipeline, not just engagement.</p>
           </div>
-          <div class="framework-block">
-            <h4 class="framework-block__title">SDR amplification</h4>
-            <p>Sales development teams equipped with angles, snippets, and sequences so one asset drives outbound as well as inbound.</p>
+          <div class="bg-cardBg border border-white/10 p-6 rounded-custom">
+            <h4 class="text-brandYellow font-bold mb-2">SDR amplification</h4>
+            <p class="text-gray-400 text-sm">Sales development teams equipped with angles, snippets, and sequences so one asset drives outbound as well as inbound.</p>
           </div>
         </div>
-        <p class="section-highlight">600+ leads (648 from one research campaign) — same asset, multi-channel demand.</p>
+        <div class="quote-block mb-16">
+          <p class="text-white">600+ leads (648 from one research campaign) — same asset, multi-channel demand.</p>
+        </div>
 
-        <h3 class="sub-title" style="margin-top: 2rem;">Case Study Production Engine</h3>
-        <div class="framework-grid">
-          <div class="framework-block">
-            <h4 class="framework-block__title">Enterprise case studies</h4>
-            <p>High-ACV, proof-heavy stories that support sales cycles and category positioning.</p>
+        <h3 class="text-xl font-bold mb-4 text-white">Case Study Production Engine</h3>
+        <div class="grid md:grid-cols-2 gap-6 mb-16">
+          <div class="bg-cardBg border border-white/10 p-6 rounded-custom">
+            <h4 class="text-brandYellow font-bold mb-2">Enterprise case studies</h4>
+            <p class="text-gray-400 text-sm">High-ACV, proof-heavy stories that support sales cycles and category positioning.</p>
           </div>
-          <div class="framework-block">
-            <h4 class="framework-block__title">Multi-round stakeholder management</h4>
-            <p>Customer, sales, legal, and marketing aligned through clear process — no endless revision loops.</p>
+          <div class="bg-cardBg border border-white/10 p-6 rounded-custom">
+            <h4 class="text-brandYellow font-bold mb-2">Multi-round stakeholder management</h4>
+            <p class="text-gray-400 text-sm">Customer, sales, legal, and marketing aligned through clear process — no endless revision loops.</p>
           </div>
-          <div class="framework-block">
-            <h4 class="framework-block__title">Sales enablement</h4>
-            <p>Case studies packaged for decks, one-pagers, and talk tracks so marketing and sales use the same proof.</p>
+          <div class="bg-cardBg border border-white/10 p-6 rounded-custom">
+            <h4 class="text-brandYellow font-bold mb-2">Sales enablement</h4>
+            <p class="text-gray-400 text-sm">Case studies packaged for decks, one-pagers, and talk tracks so marketing and sales use the same proof.</p>
           </div>
         </div>
 
-        <h3 class="sub-title" style="margin-top: 2rem;">Content Operations System</h3>
-        <p class="section-lead">Velocity and quality without scaling headcount:</p>
-        <div class="framework-grid">
-          <div class="framework-block">
-            <h4 class="framework-block__title">AI-assisted drafting</h4>
-            <p>Structured prompts and guardrails so first drafts are on-brand and on-brief — human time goes to strategy and polish.</p>
+        <h3 class="text-xl font-bold mb-4 text-white">Content Operations System</h3>
+        <p class="text-gray-400 mb-6">Velocity and quality without scaling headcount:</p>
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-cardBg border border-white/10 p-6 rounded-custom">
+            <h4 class="text-brandYellow font-bold mb-2">AI-assisted drafting</h4>
+            <p class="text-gray-400 text-sm">Structured prompts and guardrails so first drafts are on-brand and on-brief — human time goes to strategy and polish.</p>
           </div>
-          <div class="framework-block">
-            <h4 class="framework-block__title">Structured editorial QA</h4>
-            <p>Clear checkpoints for positioning, proof, and conversion so nothing ships without meeting the bar.</p>
+          <div class="bg-cardBg border border-white/10 p-6 rounded-custom">
+            <h4 class="text-brandYellow font-bold mb-2">Structured editorial QA</h4>
+            <p class="text-gray-400 text-sm">Clear checkpoints for positioning, proof, and conversion so nothing ships without meeting the bar.</p>
           </div>
-          <div class="framework-block">
-            <h4 class="framework-block__title">CMS workflow (Sanity, HubSpot)</h4>
-            <p>Publishing and iteration in the tools you already use — no content bottlenecks, no duplicate systems.</p>
+          <div class="bg-cardBg border border-white/10 p-6 rounded-custom">
+            <h4 class="text-brandYellow font-bold mb-2">CMS workflow (Sanity, HubSpot)</h4>
+            <p class="text-gray-400 text-sm">Publishing and iteration in the tools you already use — no content bottlenecks, no duplicate systems.</p>
           </div>
         </div>
-        <p class="section-note">More output, consistent quality, no proportional headcount increase.</p>
+        <p class="text-gray-500 text-sm italic">More output, consistent quality, no proportional headcount increase.</p>
       </div>
     </section>
 
-    <section class="section section--alt" id="results">
-      <div class="wrap">
-        <h2 class="section-title">Results</h2>
-        <div class="metrics-row">
-          <div class="metric-block">
-            <p class="metric-block__value">600+</p>
-            <p class="metric-block__label">Leads from one asset</p>
+    <section class="py-20">
+      <div class="section-container">
+        <h2 class="text-3xl font-bold mb-8">Results</h2>
+        <div class="grid grid-cols-1 max-w-sm mx-auto gap-4 mb-8">
+          <div class="metric-card">
+            <span class="block text-2xl font-bold text-brandYellow">600+</span>
+            <span class="text-xs text-gray-500 uppercase">Leads from one asset</span>
           </div>
         </div>
-        <p class="section-lead">Content as a predictable acquisition channel.</p>
+        <p class="text-gray-400">Content as a predictable acquisition channel.</p>
       </div>
     </section>
 
-    <section class="section section--cta" id="next-step">
-      <div class="wrap wrap--narrow">
-        <h2 class="section-title">Next Step</h2>
-        <p class="section-lead">If you want content that drives pipeline, not just traffic, book a call or download the Content CV.</p>
-        <div class="hero-cta-row" style="justify-content: center; margin-top: 1rem;">
-          <a href="https://calendly.com/craigdennis1990/1-1-consultation" class="btn btn-primary btn--large" target="_blank" rel="noopener">Book a call</a>
-          <a href="#download-cv" class="btn btn-primary btn--large" target="_blank" rel="noopener">Download Content CV</a>
+    <section class="py-32 bg-accentBg" id="download-cv">
+      <div class="section-container text-center">
+        <h2 class="text-4xl font-extrabold mb-6">Next Step</h2>
+        <p class="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
+          If you want content that drives pipeline, not just traffic, book a call or download the Content CV.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a class="btn-primary px-8 py-4 text-lg" href="https://calendly.com/craigdennis1990/1-1-consultation" target="_blank" rel="noopener">Book a call</a>
+          <a class="btn-secondary px-8 py-4 text-lg" href="#download-cv">Download Content CV</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <p><a href="../" class="logo">craigdennis.me</a></p>
-      <p class="footer-legal">Content & Demand Generation Engine — I turn content into a predictable acquisition channel.</p>
+  <footer class="py-12 border-t border-white/5">
+    <div class="section-container text-center">
+      <p class="font-bold mb-2"><a href="../" class="text-white hover:text-gray-200">craigdennis.me</a></p>
+      <p class="text-xs text-gray-600">Content &amp; Demand Generation Engine — I turn content into a predictable acquisition channel.</p>
     </div>
   </footer>
-
-  <script src="../main.js"></script>
 </body>
 </html>
