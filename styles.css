@@ -200,6 +200,11 @@ h1.hero-title em { font-style: italic; color: var(--forest); }
   border-bottom: 1px solid var(--line);
   padding: 30px 0;
 }
+.trust-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
 .trust-inner {
   display: flex;
   align-items: center;
@@ -471,6 +476,7 @@ footer { border-top: 1px solid var(--line); padding: 54px 0; }
 }
 .card h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 0.5rem; }
 .card h3 { font-size: 1.35rem; margin-bottom: 0.75rem; line-height: 1.15; }
+.card h3 em { font-style: italic; color: var(--forest); }
 .card p, .card li { color: var(--ink-soft); font-size: 0.97rem; }
 .card .price {
   font-family: var(--display);
@@ -816,6 +822,81 @@ footer { border-top: 1px solid var(--line); padding: 54px 0; }
 }
 .cs-header-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 
+/* Work page — docs-as-code workflow + clip cards */
+.dx-flow {
+  background: var(--forest-tint);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.35rem;
+  margin-bottom: 1.25rem;
+}
+.dx-flow .case-label { margin-bottom: 0.85rem; }
+.dx-flow-steps {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.dx-step {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+.dx-step--code {
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  color: var(--forest);
+}
+.dx-arrow {
+  color: var(--ink-faint);
+  font-size: 0.8rem;
+}
+.clip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+.clip-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--card);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.clip-card:hover {
+  transform: translateY(-2px);
+  border-color: oklch(0.82 0.02 152);
+}
+.clip-tag {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-bottom: 0.6rem;
+}
+.clip-title {
+  font-family: var(--display);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 0.85rem;
+}
+.clip-link {
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+}
+.clip-link span { color: var(--forest); }
+
 /* Work page — selected rankings strip */
 .rk {
   background: var(--bg);
@@ -936,7 +1017,8 @@ footer { border-top: 1px solid var(--line); padding: 54px 0; }
   .stat-row,
   .svc-grid,
   .card-grid--2,
-  .card-grid--3 { grid-template-columns: 1fr; }
+  .card-grid--3,
+  .clip-grid { grid-template-columns: 1fr; }
   .stat-card {
     border-left: none;
     padding: 1rem 0;
