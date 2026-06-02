@@ -81,4 +81,55 @@
   }
 
   initStatCounters();
+
+  function initProofLightbox() {
+    var dialog = document.getElementById('proof-lightbox');
+    if (!dialog) return;
+
+    var img = dialog.querySelector('.lightbox-img');
+    var caption = dialog.querySelector('.lightbox-caption');
+    var triggers = document.querySelectorAll('[data-lightbox-open]');
+    if (!img || !triggers.length) return;
+
+    function openLightbox(trigger) {
+      var src = trigger.getAttribute('data-lightbox-src');
+      var item = trigger.closest('.proof-item');
+      var cap = item ? item.querySelector('.proof-caption') : null;
+
+      img.src = src;
+      img.alt = trigger.getAttribute('aria-label') || 'Enlarged screenshot';
+      if (caption) {
+        caption.innerHTML = cap ? cap.innerHTML : '';
+        caption.hidden = !cap;
+      }
+      dialog.showModal();
+    }
+
+    triggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
+        openLightbox(trigger);
+      });
+    });
+
+    dialog.querySelectorAll('[data-lightbox-close]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        dialog.close();
+      });
+    });
+
+    dialog.addEventListener('click', function (event) {
+      if (event.target === dialog) dialog.close();
+    });
+
+    dialog.addEventListener('close', function () {
+      img.removeAttribute('src');
+      img.alt = '';
+      if (caption) {
+        caption.textContent = '';
+        caption.hidden = true;
+      }
+    });
+  }
+
+  initProofLightbox();
 })();
