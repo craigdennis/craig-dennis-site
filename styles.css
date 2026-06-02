@@ -1062,9 +1062,12 @@ footer { border-top: 1px solid var(--line); padding: 54px 0; }
   gap: 18px;
   padding: 17px 22px;
   border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  color: inherit;
 }
 .rk-row:last-child { border-bottom: none; }
 .rk-row:hover { background: var(--forest-tint); }
+.rk-row:hover .term { color: var(--forest-deep); }
 .rk-kw {
   display: flex;
   align-items: baseline;
