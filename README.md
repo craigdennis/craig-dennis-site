@@ -66,6 +66,5 @@ Open the URL shown (e.g. http://localhost:3000).
 
 ## Before launch checklist
 
-- Replace the placeholder testimonial in `index.html` (`<!-- TESTIMONIAL: ... -->` block).
 - Add client logos under `images/logos/` if you have permission (strip is text-only for now).
 - On `/work/`: replace `<!-- PUBLISHED: replace -->` article cards with live URLs; confirm WriteSaaS URL (`<!-- WRITESAAS: ... -->`) and GetGainStrong metrics (`<!-- GETGAINSTRONG: ... -->`).
