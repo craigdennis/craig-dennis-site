@@ -1,3 +1,7 @@
 {
-  "framework": null
+  "framework": null,
+  "redirects": [
+    { "source": "/sprint", "destination": "/services/#sprint", "permanent": true },
+    { "source": "/sprint/", "destination": "/services/#sprint", "permanent": true }
+  ]
 }

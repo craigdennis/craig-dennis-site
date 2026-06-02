@@ -7,14 +7,15 @@ Static site for Craig Dennis — B2B SaaS organic growth consulting (SEO, conten
 | Path | Purpose |
 |------|---------|
 | `/` | Marketing homepage — services overview, proof, 30-day sprint CTA |
-| `/services/` | Services hub linking to case-study pages |
-| `/sprint/` | 14-Day Evaluation Stage Capture Sprint™ (legacy offer page) |
+| `/services/` | Services & pricing — 30-Day Sprint ($5k), retainer, à la carte |
+| `/services/#sprint` | Primary offer: The 30-Day Sprint |
+| `/sprint/` | Redirects to `/services/#sprint` (legacy URL) |
 | `/seo-architecture/` | SEO architecture case study + CV |
 | `/content-demand/` | Content & demand generation case study + CV |
 | `/ai-growth/` | AI / LLM visibility case study + CV |
 | `/leakage-scan.html` | Evaluation Revenue Leakage Scan™ |
 
-Homepage primary CTA: **Start a 30-day sprint** → [Calendly](https://calendly.com/craigdennis1990/1-1-consultation). Sprint subpage copy is still the 14-day evaluation sprint; update separately when the offer is finalized.
+Homepage primary CTA: **Start a 30-day sprint** → [Calendly](https://calendly.com/craigdennis1990/1-1-consultation). Services page hero CTA: **Book a sprint call**.
 
 ## Deploy to Vercel
 
@@ -59,8 +60,7 @@ Open the URL shown (e.g. http://localhost:3000).
 
 ## Edit CTAs
 
-- Homepage / services sprint buttons: Calendly link in `index.html` and `services/index.html`.
-- Sprint page: `sprint/index.html` (`#cta-link` or hero CTA).
+- Homepage / services sprint buttons: Calendly link in `index.html` and `services/index.html` (`#sprint` section).
 - Stat counters: `main.js` (`initStatCounters`) + `[data-count]` attributes on the homepage.
 
 ## Before launch checklist
