@@ -1,58 +1,69 @@
-# craigdennis.me — Evaluation Stage Capture Sprint™
+# craigdennis.me
 
-Single-page site for the 14-Day Evaluation Stage Capture Sprint. Built for [craigdennis.me](https://craigdennis.me).
+Static site for Craig Dennis — B2B SaaS organic growth consulting (SEO, content, AI-search).
+
+## Site structure
+
+| Path | Purpose |
+|------|---------|
+| `/` | Marketing homepage — services overview, proof, 30-day sprint CTA |
+| `/services/` | Services hub linking to case-study pages |
+| `/sprint/` | 14-Day Evaluation Stage Capture Sprint™ (legacy offer page) |
+| `/seo-architecture/` | SEO architecture case study + CV |
+| `/content-demand/` | Content & demand generation case study + CV |
+| `/ai-growth/` | AI / LLM visibility case study + CV |
+| `/leakage-scan.html` | Evaluation Revenue Leakage Scan™ |
+
+Homepage primary CTA: **Start a 30-day sprint** → [Calendly](https://calendly.com/craigdennis1990/1-1-consultation). Sprint subpage copy is still the 14-day evaluation sprint; update separately when the offer is finalized.
 
 ## Deploy to Vercel
 
 ### Option A: Deploy with Vercel CLI
 
 1. Install the Vercel CLI (one time):
+
    ```bash
    npm i -g vercel
    ```
 
 2. From this folder, run:
+
    ```bash
    vercel
    ```
-   Follow the prompts (log in if needed). Your site will get a `*.vercel.app` URL.
 
-3. To deploy to production:
+3. Production:
+
    ```bash
    vercel --prod
    ```
 
 ### Option B: Deploy from GitHub
 
-1. Push this project to a GitHub repo.
-2. Go to [vercel.com](https://vercel.com) → **Add New** → **Project**.
-3. Import the repo. Vercel will detect it as a static site.
-4. Click **Deploy**. No build settings needed.
+1. Push to GitHub.
+2. [vercel.com](https://vercel.com) → **Add New** → **Project** → import repo.
+3. Deploy (no build step required).
 
-## Use your domain (craigdennis.me)
+## Domain (craigdennis.me)
 
-1. In the Vercel dashboard, open your project → **Settings** → **Domains**.
-2. Add **craigdennis.me** and **www.craigdennis.me** (optional).
-3. At your domain registrar, add the DNS records Vercel shows you:
-   - **A** record: `76.76.21.21` (or the IP Vercel gives you).
-   - Or **CNAME** for `www`: `cname.vercel-dns.com`.
-
-Vercel will issue SSL automatically. After DNS propagates, the site will be live at craigdennis.me.
-
-## Edit the CTA link
-
-In `index.html`, set the “Book a call” button to your calendar:
-
-- Find the line with `id="cta-link"` and set `href` to your Calendly/Cal.com (or other) link.
-- In `main.js` you can alternatively set it via:  
-  `document.getElementById('cta-link').href = 'https://calendly.com/your-link';`
+1. Vercel project → **Settings** → **Domains** → add `craigdennis.me` (and optional `www`).
+2. Configure DNS at your registrar per Vercel’s instructions.
 
 ## Local preview
-
-Open `index.html` in a browser, or serve the folder:
 
 ```bash
 npx serve .
 ```
 
-Then visit the URL shown (e.g. http://localhost:3000).
+Open the URL shown (e.g. http://localhost:3000).
+
+## Edit CTAs
+
+- Homepage / services sprint buttons: Calendly link in `index.html` and `services/index.html`.
+- Sprint page: `sprint/index.html` (`#cta-link` or hero CTA).
+- Stat counters: `main.js` (`initStatCounters`) + `[data-count]` attributes on the homepage.
+
+## Before launch checklist
+
+- Replace the placeholder testimonial in `index.html` (`<!-- TESTIMONIAL: ... -->` block).
+- Add client logos under `images/logos/` if you have permission (strip is text-only for now).

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NB3JHD14FK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NB3JHD14FK');
+  </script>
+  <meta name="description" content="SEO architecture, content marketing, and AI/LLM visibility for B2B SaaS. Systems that turn organic traffic into pipeline." />
+  <title>Services — Craig Dennis</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandYellow: '#f4b825',
+            darkBg: '#0a0a0a',
+            cardBg: '#141414',
+            accentBg: '#1a1a1a'
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          borderRadius: { custom: '8px' }
+        }
+      }
+    };
+  </script>
+  <style>
+    body { background-color: #0a0a0a; color: #e5e5e5; font-family: 'Inter', sans-serif; line-height: 1.6; }
+    h1, h2, h3 { color: #ffffff; letter-spacing: -0.02em; }
+    .page-container { max-width: 64rem; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+    .btn-primary { background-color: #f4b825; color: #000; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; display: inline-flex; align-items: center; text-decoration: none; }
+    .btn-primary:hover { background-color: #e2a81f; color: #000; text-decoration: none; }
+    .menu-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 2rem; height: 2rem; padding: 0; background: none; border: none; cursor: pointer; color: #fff; }
+    .menu-toggle span { display: block; height: 2px; width: 100%; background: currentColor; border-radius: 1px; }
+    @media (max-width: 767px) {
+      .menu-toggle { display: flex; }
+      .site-nav {
+        position: fixed; top: 0; right: 0; bottom: 0; width: min(85vw, 280px);
+        flex-direction: column; align-items: flex-start; gap: 1rem; padding: 5rem 1.5rem 1.5rem;
+        background: #0a0a0a; border-left: 1px solid #262626;
+        transform: translateX(100%); transition: transform 0.2s ease; z-index: 60;
+      }
+      .site-nav.is-open { transform: translateX(0); }
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <header class="py-6 border-b border-white/5 sticky top-0 bg-darkBg/80 backdrop-blur-md z-50">
+    <div class="page-container flex justify-between items-center">
+      <a href="/" class="font-bold text-xl tracking-tight text-white hover:text-gray-200 no-underline">craigdennis.me</a>
+      <nav class="site-nav hidden md:flex items-center gap-6" aria-label="Main">
+        <a class="text-sm text-gray-400 hover:text-white no-underline" href="/services/">Services</a>
+        <a class="text-sm text-gray-400 hover:text-white no-underline" href="/#proof">Work</a>
+        <a class="text-sm text-gray-400 hover:text-white no-underline" href="/leakage-scan.html">Leakage Scan</a>
+        <a class="btn-primary text-sm py-2 px-4" href="https://calendly.com/craigdennis1990/1-1-consultation" target="_blank" rel="noopener">Book a call</a>
+      </nav>
+      <button type="button" class="menu-toggle md:hidden" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="pt-20 pb-16 md:pt-28">
+      <div class="page-container">
+        <p class="text-brandYellow font-mono text-xs uppercase tracking-widest mb-4">Services</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-balance">Systems that compound organic growth</h1>
+        <p class="text-lg text-gray-400 max-w-2xl mb-12">
+          Three engagement areas — each with case studies, metrics, and downloadable CVs. Pick the lane that matches your bottleneck, or run a 30-day sprint across all three.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6" id="seo">
+          <article class="bg-cardBg border border-white/10 p-6 rounded-custom flex flex-col">
+            <h2 class="text-xl font-bold mb-3">SEO architecture &amp; strategy</h2>
+            <p class="text-gray-400 text-sm flex-grow mb-6">From volatile rankings to predictable pipeline. Crawl governance, semantic clusters, and revenue attribution in GA4 + CRM.</p>
+            <a href="/seo-architecture/" class="text-brandYellow font-semibold text-sm hover:underline no-underline">View SEO work →</a>
+          </article>
+
+          <article class="bg-cardBg border border-white/10 p-6 rounded-custom flex flex-col" id="content">
+            <h2 class="text-xl font-bold mb-3">Content marketing</h2>
+            <p class="text-gray-400 text-sm flex-grow mb-6">Research-driven demand, case study production, and content operations — built to generate pipeline, not just traffic.</p>
+            <a href="/content-demand/" class="text-brandYellow font-semibold text-sm hover:underline no-underline">View content work →</a>
+          </article>
+
+          <article class="bg-cardBg border border-white/10 p-6 rounded-custom flex flex-col" id="ai">
+            <h2 class="text-xl font-bold mb-3">AI / LLM visibility (AEO)</h2>
+            <p class="text-gray-400 text-sm flex-grow mb-6">LLM sentiment frameworks, entity optimization, and AI-augmented production so models describe your brand accurately.</p>
+            <a href="/ai-growth/" class="text-brandYellow font-semibold text-sm hover:underline no-underline">View AI work →</a>
+          </article>
+        </div>
+
+        <div class="mt-16 text-center">
+          <a class="btn-primary px-8 py-4 text-lg" href="https://calendly.com/craigdennis1990/1-1-consultation" target="_blank" rel="noopener">Start a 30-day sprint</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-12 border-t border-white/5">
+    <div class="page-container text-center">
+      <p class="font-bold mb-2"><a href="/" class="text-white hover:text-gray-200 no-underline">craigdennis.me</a></p>
+      <p class="text-xs text-gray-600">Services — SEO, content, and AI-search for B2B SaaS.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+</body>
+</html>
