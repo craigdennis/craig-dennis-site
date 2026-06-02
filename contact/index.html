@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NB3JHD14FK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NB3JHD14FK');
+  </script>
+  <meta name="description" content="Tell me about your team and what you're trying to grow. B2B SaaS organic growth — sprint, retainer, or standalone engagements." />
+  <title>Contact — Craig Dennis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <!--
+    Tally setup (tally.so → New form):
+    1. Fields: Name, Email, Company, What you need (multiple choice), Message (long text)
+    2. "What you need" options: 30-Day Sprint | Ongoing retainer | Standalone / à la carte
+    3. Share → Embed → form ID in contact/tally-config.js
+    4. After submit, tally-embed.js redirects to /contact/thanks/
+  -->
+</head>
+<body>
+  <header>
+    <div class="wrap nav-row">
+      <a href="/" class="logo">craigdennis<em>.me</em></a>
+      <button type="button" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" aria-label="Main">
+        <a href="/services/">Services</a>
+        <a href="/work/">Work</a>
+        <a class="btn btn-primary btn-sm" href="/contact/" aria-current="page">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="sec-kicker">Contact</div>
+        <h1>Let&rsquo;s see if there&rsquo;s a fit.</h1>
+        <p class="lead contact-intro">
+          Tell me about your team and what you&rsquo;re trying to grow. If I can help, I&rsquo;ll reply within 2 business days.
+        </p>
+      </div>
+    </section>
+
+    <section class="sec sec--tight contact-sec">
+      <div class="wrap">
+        <div class="contact-layout">
+          <aside class="contact-aside" aria-label="How this works">
+            <p class="contact-aside__lead">I work with a small number of B2B SaaS teams at a time. A few details up front helps me respond with something useful — not a generic pitch.</p>
+            <h2 class="contact-aside__title">What you&rsquo;ll share</h2>
+            <ul class="check-list contact-aside__list">
+              <li>Who you are and where you work</li>
+              <li>What you&rsquo;re looking for — sprint, retainer, or standalone</li>
+              <li>A short note on what you&rsquo;re trying to grow</li>
+            </ul>
+            <h2 class="contact-aside__title">Engagement types</h2>
+            <ul class="contact-offers">
+              <li>
+                <strong>30-Day Sprint</strong>
+                <span>$5k fixed — full month, built-in exit. <a href="/services/#sprint">Details →</a></span>
+              </li>
+              <li>
+                <strong>Ongoing retainer</strong>
+                <span>6-month engagements after a sprint proves fit. <a href="/services/#retainer">Details →</a></span>
+              </li>
+              <li>
+                <strong>Standalone</strong>
+                <span>Content, SEO strategy, or AI workflow — scoped individually. <a href="/services/#ala-carte">Details →</a></span>
+              </li>
+            </ul>
+            <p class="contact-aside__note muted">Not a fit? I&rsquo;ll say so. No hard feelings.</p>
+          </aside>
+
+          <div class="contact-form card">
+            <noscript>
+              <p>Open the <a href="https://tally.so" rel="noopener">contact form on Tally</a> — JavaScript is required for the embedded form.</p>
+            </noscript>
+            <div class="tally-embed tally-embed--contact" data-tally-placeholder hidden>
+              <p><strong>Form not connected yet.</strong> Create your Tally form, then set <code>TALLY_CONTACT_FORM_ID</code> in <code>contact/tally-config.js</code>.</p>
+            </div>
+            <iframe
+              data-tally-contact
+              class="tally-embed__frame"
+              loading="lazy"
+              width="100%"
+              height="420"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              title="Contact Craig Dennis"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot foot--center">
+      <div class="foot-brand">craigdennis<em>.me</em></div>
+      <p>B2B SaaS organic growth — SEO, content, and AI-search systems.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+  <script src="/contact/tally-config.js"></script>
+  <script src="/contact/tally-embed.js"></script>
+  <script>
+    (function () {
+      var id = window.TALLY_CONTACT_FORM_ID;
+      var placeholder = document.querySelector("[data-tally-placeholder]");
+      var frame = document.querySelector("[data-tally-contact]");
+      if (!id || id === "REPLACE_WITH_YOUR_FORM_ID") {
+        if (placeholder) placeholder.hidden = false;
+        if (frame) frame.hidden = true;
+      }
+    })();
+  </script>
+</body>
+</html>
