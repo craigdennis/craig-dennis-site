@@ -1,20 +1,11 @@
 (function () {
   var menuToggle = document.querySelector('.menu-toggle');
-  var nav = document.querySelector('.site-nav') || document.querySelector('.nav');
+  var nav = document.querySelector('.nav-links') || document.querySelector('.site-nav') || document.querySelector('.nav');
   if (menuToggle && nav) {
     menuToggle.addEventListener('click', function () {
       var open = !nav.classList.contains('is-open');
       nav.classList.toggle('is-open', open);
       menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      if (window.matchMedia('(max-width: 767px)').matches) {
-        if (open) {
-          nav.classList.remove('hidden');
-          nav.classList.add('flex');
-        } else {
-          nav.classList.add('hidden');
-          nav.classList.remove('flex');
-        }
-      }
     });
   }
 

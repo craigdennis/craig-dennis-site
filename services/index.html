@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -12,53 +12,10 @@
   </script>
   <meta name="description" content="The 30-Day Sprint — $5,000 fixed. Full month of SEO, content, AI workflows, and tracking for B2B SaaS. Ongoing retainer and à la carte services available." />
   <title>Services — 30-Day Sprint ($5,000) | Craig Dennis</title>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brandYellow: '#f4b825',
-            darkBg: '#0a0a0a',
-            cardBg: '#141414',
-            accentBg: '#1a1a1a'
-          },
-          fontFamily: { sans: ['Inter', 'sans-serif'] },
-          borderRadius: { custom: '8px' }
-        }
-      }
-    };
-  </script>
-  <style>
-    body { background-color: #0a0a0a; color: #e5e5e5; font-family: 'Inter', sans-serif; line-height: 1.6; }
-    h1, h2, h3 { color: #ffffff; letter-spacing: -0.02em; }
-    .text-balance { text-wrap: balance; }
-    .page-container { max-width: 64rem; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem; }
-    .btn-primary { background-color: #f4b825; color: #000; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; transition: all 0.2s; display: inline-flex; align-items: center; text-decoration: none; }
-    .btn-primary:hover { background-color: #e2a81f; transform: translateY(-1px); color: #000; text-decoration: none; }
-    .btn-secondary { background-color: transparent; border: 1px solid #f4b825; color: #f4b825; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 8px; transition: all 0.2s; display: inline-flex; align-items: center; text-decoration: none; }
-    .btn-secondary:hover { background-color: rgba(244, 184, 37, 0.1); color: #f4b825; text-decoration: none; }
-    .quote-block { border-left: 4px solid #f4b825; padding: 1.5rem; background-color: #141414; border-radius: 0 8px 8px 0; }
-    .check-list { list-style: none; padding: 0; margin: 0; }
-    .check-list li { position: relative; padding-left: 1.75rem; margin-bottom: 0.75rem; color: #d4d4d4; }
-    .check-list li::before { content: ''; position: absolute; left: 0; top: 0.45rem; width: 0.5rem; height: 0.5rem; background: #f4b825; border-radius: 1px; }
-    .menu-toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 2rem; height: 2rem; padding: 0; background: none; border: none; cursor: pointer; color: #fff; }
-    .menu-toggle span { display: block; height: 2px; width: 100%; background: currentColor; border-radius: 1px; }
-    @media (max-width: 767px) {
-      .menu-toggle { display: flex; }
-      .site-nav {
-        position: fixed; top: 0; right: 0; bottom: 0; width: min(85vw, 280px);
-        flex-direction: column; align-items: flex-start; gap: 1rem; padding: 5rem 1.5rem 1.5rem;
-        background: #0a0a0a; border-left: 1px solid #262626;
-        transform: translateX(100%); transition: transform 0.2s ease; z-index: 60;
-      }
-      .site-nav.is-open { transform: translateX(0); }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -76,136 +33,120 @@
   }
   </script>
 </head>
-<body class="antialiased">
-  <header class="py-6 border-b border-white/5 sticky top-0 bg-darkBg/80 backdrop-blur-md z-50">
-    <div class="page-container flex justify-between items-center">
-      <a href="/" class="font-bold text-xl tracking-tight text-white hover:text-gray-200 no-underline">craigdennis.me</a>
-      <nav class="site-nav hidden md:flex items-center gap-6" aria-label="Main">
-        <a class="text-sm text-white no-underline" href="/services/" aria-current="page">Services</a>
-        <a class="text-sm text-gray-400 hover:text-white no-underline" href="/#proof">Work</a>
-        <a class="text-sm text-gray-400 hover:text-white no-underline" href="/leakage-scan.html">Leakage Scan</a>
-        <a class="btn-primary text-sm py-2 px-4" href="https://calendly.com/craigdennis1990/1-1-consultation" target="_blank" rel="noopener">Book a call</a>
-      </nav>
-      <button type="button" class="menu-toggle md:hidden" aria-label="Toggle menu" aria-expanded="false">
+<body>
+  <header>
+    <div class="wrap nav-row">
+      <a href="/" class="logo">craigdennis<em>.me</em></a>
+      <button type="button" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
+      <nav class="nav-links" aria-label="Main">
+        <a href="/services/" aria-current="page">Services</a>
+        <a href="/work/">Work</a>
+        <a href="/leakage-scan.html">Leakage Scan</a>
+        <a class="btn btn-primary btn-sm" href="https://calendly.com/craigdennis1990/1-1-consultation" target="_blank" rel="noopener">Book a call</a>
+      </nav>
     </div>
   </header>
 
   <main>
-    <section class="pt-16 pb-20 md:pt-24 md:pb-28" id="sprint" aria-labelledby="sprint-heading">
-      <div class="page-container">
-        <article class="bg-cardBg border border-brandYellow/30 rounded-custom p-8 md:p-12">
-          <p class="text-brandYellow font-mono text-xs uppercase tracking-widest mb-4">Primary offer</p>
-
-          <div class="grid md:grid-cols-2 gap-10 md:gap-12 mb-10">
+    <section class="sec" id="sprint" aria-labelledby="sprint-heading">
+      <div class="wrap">
+        <article class="card card--featured">
+          <div class="sec-kicker">Primary offer</div>
+          <div class="card-split">
             <div>
-              <h1 id="sprint-heading" class="text-3xl md:text-5xl font-extrabold mb-4 text-balance">The 30-Day Sprint</h1>
-              <p class="text-4xl md:text-5xl font-extrabold text-white tabular-nums mb-1">$5,000</p>
-              <p class="text-sm text-gray-500 uppercase tracking-wide mb-6">Fixed price</p>
-              <p class="text-lg text-gray-300 leading-relaxed">
-                A full month of compounding growth work, with a built-in exit. If it's working by day 30, we go long-term. If it's not, you keep everything.
-              </p>
+              <h1 id="sprint-heading" style="font-family:var(--display);font-weight:500;font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:0.5rem;">The 30-Day Sprint</h1>
+              <p class="price">$5,000</p>
+              <p class="price-note">Fixed price</p>
+              <p>A full month of compounding growth work, with a built-in exit. If it's working by day 30, we go long-term. If it's not, you keep everything.</p>
             </div>
             <div>
-              <h2 class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-4">What's included</h2>
-              <ul class="check-list text-sm md:text-base">
+              <h2 class="sec-kicker" style="margin-bottom:1rem;">What's included</h2>
+              <ul class="check-list">
                 <li>Full keyword and search strategy</li>
                 <li>4 optimised content pieces</li>
                 <li>AI workflow setup</li>
                 <li>Dashboard + tracking</li>
-                <li>Daily stand-ups <span class="text-gray-500">(optional)</span></li>
+                <li>Daily stand-ups <span class="muted">(optional)</span></li>
               </ul>
             </div>
           </div>
-
-          <blockquote class="quote-block mb-10">
-            <p class="text-lg text-white font-medium mb-0 text-balance">
-              If it's working by day 30, we move to a 6-month retainer. If it's not, you keep the assets and the roadmap. No lock-in.
-            </p>
+          <blockquote class="quote-block">
+            <p>If it's working by day 30, we move to a 6-month retainer. If it's not, you keep the assets and the roadmap. No lock-in.</p>
           </blockquote>
-
-          <a class="btn-primary px-8 py-4 text-lg" href="https://calendly.com/craigdennis1990/1-1-consultation" target="_blank" rel="noopener">Book a sprint call</a>
+          <a class="btn btn-primary btn-lg" href="https://calendly.com/craigdennis1990/1-1-consultation" target="_blank" rel="noopener">Book a sprint call</a>
         </article>
       </div>
     </section>
 
-    <section class="pb-20" id="retainer" aria-labelledby="retainer-heading">
-      <div class="page-container">
-        <p class="text-brandYellow font-mono text-xs uppercase tracking-widest mb-3">Tier 2</p>
-        <article class="bg-cardBg border border-white/10 rounded-custom p-8 md:p-10">
-          <h2 id="retainer-heading" class="text-2xl md:text-3xl font-bold mb-2">Ongoing retainer</h2>
-          <p class="text-gray-400 mb-6 max-w-2xl">The &ldquo;we go long-term&rdquo; path the sprint converts into.</p>
-          <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 mb-6">
-            <p class="text-white font-semibold">6-month engagement</p>
-            <span class="text-gray-600">·</span>
-            <p class="text-gray-400">Contact for pricing</p>
-          </div>
-          <p class="text-sm text-gray-500 uppercase tracking-widest mb-3">Scope</p>
-          <ul class="check-list text-sm md:text-base mb-8 max-w-xl">
+    <section class="sec sec--alt" id="retainer" aria-labelledby="retainer-heading">
+      <div class="wrap">
+        <div class="sec-kicker">Tier 2</div>
+        <article class="card">
+          <h2 id="retainer-heading">Ongoing retainer</h2>
+          <p class="sec-lead" style="margin-bottom:1.5rem;">The &ldquo;we go long-term&rdquo; path the sprint converts into.</p>
+          <p><strong>6-month engagement</strong> · Contact for pricing</p>
+          <p class="sec-kicker" style="margin:1.5rem 0 0.75rem;">Scope</p>
+          <ul class="check-list">
             <li>Continuous content production</li>
             <li>SEO architecture ownership</li>
             <li>AEO / AI-search visibility</li>
             <li>Dashboard + tracking ownership</li>
           </ul>
-          <a class="btn-secondary px-6 py-3" href="https://calendly.com/craigdennis1990/1-1-consultation" target="_blank" rel="noopener">Discuss retainer</a>
+          <p style="margin-top:1.5rem;">
+            <a class="btn btn-ghost" href="https://calendly.com/craigdennis1990/1-1-consultation" target="_blank" rel="noopener">Discuss retainer</a>
+          </p>
         </article>
       </div>
     </section>
 
-    <section class="pb-20" id="ala-carte" aria-labelledby="ala-carte-heading">
-      <div class="page-container">
-        <p class="text-brandYellow font-mono text-xs uppercase tracking-widest mb-3">Tier 3</p>
-        <h2 id="ala-carte-heading" class="text-2xl md:text-3xl font-bold mb-2">Standalone / à la carte</h2>
-        <p class="text-gray-400 mb-8 max-w-2xl">For clients who don't want the full sprint. Each engagement is scoped individually.</p>
-
-        <div class="grid md:grid-cols-3 gap-6">
-          <article class="bg-cardBg border border-white/10 p-6 rounded-custom flex flex-col">
-            <h3 class="text-lg font-bold mb-3">Content writing</h3>
-            <p class="text-gray-400 text-sm flex-grow mb-4">
-              Long-form SEO content for B2B SaaS and developer audiences. Work for Userpilot, DataStax, and Global Payments is the proof.
-            </p>
-            <p class="text-sm text-gray-500 mb-4">Contact for pricing</p>
-            <a href="/content-demand/" class="text-brandYellow font-semibold text-sm hover:underline no-underline mt-auto">View content work →</a>
+    <section class="sec" id="ala-carte" aria-labelledby="ala-carte-heading">
+      <div class="wrap">
+        <div class="sec-kicker">Tier 3</div>
+        <h2 id="ala-carte-heading" class="sec-title" style="margin-bottom:0.5rem;">Standalone / à la carte</h2>
+        <p class="sec-lead" style="margin-bottom:2rem;">For clients who don't want the full sprint. Each engagement is scoped individually.</p>
+        <div class="card-grid card-grid--3">
+          <article class="card">
+            <h3>Content writing</h3>
+            <p>Long-form SEO content for B2B SaaS and developer audiences. Work for Userpilot, DataStax, and Global Payments is the proof.</p>
+            <p class="muted" style="margin:1rem 0;">Contact for pricing</p>
+            <a href="/content-demand/" class="text-link">View content work →</a>
           </article>
-
-          <article class="bg-cardBg border border-white/10 p-6 rounded-custom flex flex-col">
-            <h3 class="text-lg font-bold mb-3">AI workflow + dashboard setup</h3>
-            <p class="text-gray-400 text-sm flex-grow mb-4">
-              GPT-4 / Claude / Make.com production pipelines and tracking dashboards. Few content freelancers offer the build — this is the distinctive lane.
-            </p>
-            <p class="text-sm text-gray-500 mb-4">Contact for pricing</p>
-            <a href="/ai-growth/" class="text-brandYellow font-semibold text-sm hover:underline no-underline mt-auto">View AI work →</a>
+          <article class="card">
+            <h3>AI workflow + dashboard setup</h3>
+            <p>GPT-4 / Claude / Make.com production pipelines and tracking dashboards. Few content freelancers offer the build — this is the distinctive lane.</p>
+            <p class="muted" style="margin:1rem 0;">Contact for pricing</p>
+            <a href="/ai-growth/" class="text-link">View AI work →</a>
           </article>
-
-          <article class="bg-cardBg border border-white/10 p-6 rounded-custom flex flex-col">
-            <h3 class="text-lg font-bold mb-3">SEO strategy &amp; audit</h3>
-            <p class="text-gray-400 text-sm flex-grow mb-4">
-              Architecture, internal linking, content refresh, and technical crawl — scoped to what moves pipeline, not vanity metrics.
-            </p>
-            <p class="text-sm text-gray-500 mb-4">Contact for pricing</p>
-            <a href="/seo-architecture/" class="text-brandYellow font-semibold text-sm hover:underline no-underline mt-auto">View SEO work →</a>
+          <article class="card">
+            <h3>SEO strategy &amp; audit</h3>
+            <p>Architecture, internal linking, content refresh, and technical crawl — scoped to what moves pipeline, not vanity metrics.</p>
+            <p class="muted" style="margin:1rem 0;">Contact for pricing</p>
+            <a href="/seo-architecture/" class="text-link">View SEO work →</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="pb-20 border-t border-white/5 pt-16" aria-labelledby="proof-heading">
-      <div class="page-container">
-        <h2 id="proof-heading" class="text-xl font-bold mb-6 text-center">See the work</h2>
-        <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-sm">
-          <a href="/seo-architecture/" class="text-gray-400 hover:text-brandYellow no-underline font-semibold">SEO architecture →</a>
-          <a href="/content-demand/" class="text-gray-400 hover:text-brandYellow no-underline font-semibold">Content marketing →</a>
-          <a href="/ai-growth/" class="text-gray-400 hover:text-brandYellow no-underline font-semibold">AI / LLM visibility →</a>
+    <section class="sec sec--alt" aria-labelledby="proof-heading">
+      <div class="wrap" style="text-align:center;">
+        <h2 id="proof-heading" class="sec-title">See the work</h2>
+        <p class="sec-lead" style="margin:0 auto 1.5rem;max-width:32rem;">Case studies, published writing, and products built end-to-end.</p>
+        <a href="/work/" class="text-link">View portfolio →</a>
+        <div class="btn-row" style="justify-content:center;margin-top:1.5rem;">
+          <a href="/work/#case-studies" class="text-link">Case studies →</a>
+          <a href="/work/#published-writing" class="text-link">Published writing →</a>
+          <a href="/work/#builds" class="text-link">Builds →</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="py-12 border-t border-white/5">
-    <div class="page-container text-center">
-      <p class="font-bold mb-2"><a href="/" class="text-white hover:text-gray-200 no-underline">craigdennis.me</a></p>
-      <p class="text-xs text-gray-600">Services — SEO, content, and AI-search for B2B SaaS.</p>
+  <footer>
+    <div class="wrap foot foot--center">
+      <div class="foot-brand">craigdennis<em>.me</em></div>
+      <p>Services — SEO, content, and AI-search for B2B SaaS.</p>
     </div>
   </footer>
 

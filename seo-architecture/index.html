@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NB3JHD14FK"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -12,386 +11,236 @@
     gtag('config', 'G-NB3JHD14FK');
   </script>
   <meta name="description" content="From volatile rankings to predictable pipeline. SEO architecture that revenue leaders and CFOs can believe in. 30k → 110k+ monthly visits, 40–55 organic opportunities/month, $2M–$3.5M ACV influenced." />
-  <title>SEO Architect - From Volatile Rankings to Predictable Pipeline</title>
-  <!-- Tailwind CSS V3 CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <!-- Google Fonts: Inter -->
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            primary: '#257bf4',
-            brandYellow: '#f4b825',
-            darkBg: '#0a0a0a',
-            cardBg: '#141414',
-            accentBg: '#1a1a1a'
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          },
-          borderRadius: {
-            'custom': '8px',
-          }
-        }
-      }
-    }
-  </script>
-  <style data-purpose="custom-typography">
-    body {
-      background-color: #0a0a0a;
-      color: #e5e5e5;
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-    }
-    h1, h2, h3, h4 {
-      color: #ffffff;
-      letter-spacing: -0.02em;
-    }
-    .text-balance {
-      text-wrap: balance;
-    }
-    .gradient-text {
-      background: linear-gradient(to right, #ffffff, #a1a1a1);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  </style>
-  <style data-purpose="layout-components">
-    .section-container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-    .btn-primary {
-      background-color: #f4b825;
-      color: #000000;
-      font-weight: 600;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      transition: all 0.2s;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .btn-primary:hover {
-      background-color: #e2a81f;
-      transform: translateY(-1px);
-    }
-    .btn-secondary {
-      background-color: transparent;
-      border: 1px solid #f4b825;
-      color: #f4b825;
-      font-weight: 600;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      transition: all 0.2s;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .btn-secondary:hover {
-      background-color: rgba(244, 184, 37, 0.1);
-    }
-    .quote-block {
-      border-left: 4px solid #f4b825;
-      padding-left: 1.5rem;
-      background-color: #141414;
-      padding: 1.5rem;
-      border-radius: 0 8px 8px 0;
-    }
-    .metric-card {
-      background-color: #141414;
-      border: 1px solid #262626;
-      padding: 1.5rem;
-      border-radius: 8px;
-      text-align: center;
-    }
-  </style>
+  <title>SEO Architect — From Volatile Rankings to Predictable Pipeline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
-<body class="antialiased">
-  <!-- BEGIN: MainHeader -->
-  <header class="py-6 border-b border-white/5 sticky top-0 bg-darkBg/80 backdrop-blur-md z-50">
-    <div class="section-container flex justify-between items-center">
-      <a href="../" class="font-bold text-xl tracking-tight text-white hover:text-gray-200">craigdennis.me</a>
-      <nav class="hidden md:flex gap-4">
-        <a class="btn-primary text-sm" href="#case-study">View Case Study</a>
-        <a class="btn-secondary text-sm" href="/seo-architecture/Craig-Dennis-SEO-CV-Case-Study.pdf" download="Craig-Dennis-SEO-CV-Case-Study.pdf">Download SEO CV</a>
+<body>
+  <header>
+    <div class="wrap nav-row">
+      <a href="/" class="logo">craigdennis<em>.me</em></a>
+      <button type="button" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" aria-label="Main">
+        <a href="/services/">Services</a>
+        <a href="/work/">Work</a>
+        <a href="/leakage-scan.html">Leakage Scan</a>
+        <div class="cs-header-actions">
+          <a class="btn btn-primary btn-sm" href="#case-study">View case study</a>
+          <a class="btn btn-ghost btn-sm" href="/seo-architecture/Craig-Dennis-SEO-CV-Case-Study.pdf" download="Craig-Dennis-SEO-CV-Case-Study.pdf">Download CV</a>
+        </div>
       </nav>
     </div>
   </header>
-  <!-- END: MainHeader -->
 
   <main>
-    <!-- BEGIN: Hero Section -->
-    <section class="pt-20 pb-16 md:pt-32 md:pb-24">
-      <div class="section-container">
-        <div class="mb-8">
-          <img alt="Craig Dennis Profile" class="w-20 h-20 rounded-full border-2 border-brandYellow object-cover" src="../images/headshot.jpeg" width="80" height="80"/>
-        </div>
-        <p class="text-brandYellow font-mono text-xs uppercase tracking-widest mb-4">SEO ARCHITECTURE</p>
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-balance">
-          From Volatile Rankings to Predictable Pipeline
-        </h1>
-        <p class="text-lg text-gray-400 mb-8 max-w-2xl">
-          SEO Architecture that Revenue Leaders — and CFOs — Can Believe In. I build revenue-aligned organic systems that turn search visibility into pipeline.
-        </p>
-        <!-- Stats Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+    <section class="cs-hero">
+      <div class="wrap wrap--content">
+        <img class="headshot" src="/images/headshot.jpeg" alt="Craig Dennis" width="80" height="80" />
+        <div class="sec-kicker">SEO architecture</div>
+        <h1>From volatile rankings to predictable pipeline</h1>
+        <p class="lead">SEO architecture that revenue leaders — and CFOs — can believe in. I build revenue-aligned organic systems that turn search visibility into pipeline.</p>
+        <div class="cs-metrics">
           <div class="metric-card">
-            <span class="block text-2xl font-bold text-brandYellow">+1,828%</span>
-            <span class="text-xs text-gray-500 uppercase">Monthly Visits</span>
+            <span class="metric-card__value">+1,828%</span>
+            <span class="metric-card__label">Monthly visits</span>
           </div>
           <div class="metric-card">
-            <span class="block text-2xl font-bold text-brandYellow">40-55</span>
-            <span class="text-xs text-gray-500 uppercase">Organic Ops/Mo</span>
+            <span class="metric-card__value">40–55</span>
+            <span class="metric-card__label">Organic opps/mo</span>
           </div>
           <div class="metric-card">
-            <span class="block text-2xl font-bold text-brandYellow">648</span>
-            <span class="text-xs text-gray-500 uppercase">Leads / Single Asset</span>
+            <span class="metric-card__value">648</span>
+            <span class="metric-card__label">Leads / single asset</span>
           </div>
           <div class="metric-card">
-            <span class="block text-2xl font-bold text-brandYellow">$3.5M</span>
-            <span class="text-xs text-gray-500 uppercase">ACV Influenced</span>
+            <span class="metric-card__value">$3.5M</span>
+            <span class="metric-card__label">ACV influenced</span>
           </div>
         </div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a class="btn-primary" href="#case-study">View Case Study</a>
-          <a class="btn-secondary" href="/seo-architecture/Craig-Dennis-SEO-CV-Case-Study.pdf" download="Craig-Dennis-SEO-CV-Case-Study.pdf">Download SEO CV</a>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#case-study">View case study</a>
+          <a class="btn btn-ghost" href="/seo-architecture/Craig-Dennis-SEO-CV-Case-Study.pdf" download="Craig-Dennis-SEO-CV-Case-Study.pdf">Download SEO CV</a>
         </div>
       </div>
     </section>
-    <!-- END: Hero Section -->
 
-    <!-- BEGIN: Problem Section -->
-    <section class="py-20 bg-accentBg">
-      <div class="section-container">
-        <h2 class="text-3xl font-bold mb-8">The Pattern I Keep Seeing</h2>
-        <p class="text-gray-300 mb-8">Organic used to be the cheapest pipeline source. Then things changed:</p>
-        <ul class="space-y-4 mb-10 text-gray-400">
-          <li class="flex items-start gap-3">
-            <span class="text-brandYellow mt-1">●</span>
-            <span>Engineering ships a redesign. Rankings wobble.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-brandYellow mt-1">●</span>
-            <span>AI answers reduce clicks. Attribution gets debated.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-brandYellow mt-1">●</span>
-            <span>Paid CAC rises — and suddenly organic "needs to perform."</span>
-          </li>
+    <section class="cs-section cs-section--alt">
+      <div class="wrap wrap--content">
+        <h2>The pattern I keep seeing</h2>
+        <p>Organic used to be the cheapest pipeline source. Then things changed:</p>
+        <ul class="cs-list">
+          <li><span class="mark">●</span><span>Engineering ships a redesign. Rankings wobble.</span></li>
+          <li><span class="mark">●</span><span>AI answers reduce clicks. Attribution gets debated.</span></li>
+          <li><span class="mark">●</span><span>Paid CAC rises — and suddenly organic "needs to perform."</span></li>
         </ul>
-        <div class="quote-block">
-          <p class="text-gray-500 italic mb-2 uppercase text-xs tracking-widest">Leadership asks:</p>
-          <p class="text-xl text-white font-medium">"Where is next quarter's organic pipeline coming from?"</p>
-        </div>
-        <p class="mt-8 text-gray-400">If you can't answer that with confidence, you don't have an SEO strategy. You have activity.</p>
+        <blockquote class="quote-block">
+          <p><span class="muted" style="display:block;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;">Leadership asks:</span> "Where is next quarter's organic pipeline coming from?"</p>
+        </blockquote>
+        <p>If you can't answer that with confidence, you don't have an SEO strategy. You have activity.</p>
       </div>
     </section>
-    <!-- END: Problem Section -->
 
-    <!-- BEGIN: Systems Section -->
-    <section class="py-20">
-      <div class="section-container">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-balance">That's Not a Traffic Problem. It's a Systems Problem.</h2>
-        <div class="grid md:grid-cols-2 gap-12">
+    <section class="cs-section">
+      <div class="wrap wrap--content">
+        <h2>That's not a traffic problem. It's a systems problem.</h2>
+        <div class="cs-two-col">
           <div>
-            <h3 class="text-gray-500 uppercase text-xs tracking-widest mb-6">Most teams treat SEO as:</h3>
-            <ul class="space-y-4 text-gray-300">
-              <li class="flex items-center gap-3"><span class="text-red-500">×</span> A content calendar</li>
-              <li class="flex items-center gap-3"><span class="text-red-500">×</span> A list of optimizations</li>
-              <li class="flex items-center gap-3"><span class="text-red-500">×</span> Quarterly audits</li>
-              <li class="flex items-center gap-3"><span class="text-red-500">×</span> A backlog no one owns</li>
+            <h4>Most teams treat SEO as:</h4>
+            <ul class="cs-list">
+              <li><span class="mark mark--no">×</span><span>A content calendar</span></li>
+              <li><span class="mark mark--no">×</span><span>A list of optimizations</span></li>
+              <li><span class="mark mark--no">×</span><span>Quarterly audits</span></li>
+              <li><span class="mark mark--no">×</span><span>A backlog no one owns</span></li>
             </ul>
           </div>
           <div>
-            <h3 class="text-gray-500 uppercase text-xs tracking-widest mb-6">But search engines reward structure:</h3>
-            <ul class="space-y-4 text-gray-300">
-              <li class="flex items-center gap-3"><span class="text-brandYellow">✓</span> Crawlable internal link systems</li>
-              <li class="flex items-center gap-3"><span class="text-brandYellow">✓</span> Canonical control &amp; duplication management</li>
-              <li class="flex items-center gap-3"><span class="text-brandYellow">✓</span> Intent-mapped information architecture</li>
-              <li class="flex items-center gap-3"><span class="text-brandYellow">✓</span> Consolidated authority</li>
+            <h4>But search engines reward structure:</h4>
+            <ul class="cs-list">
+              <li><span class="mark">✓</span><span>Crawlable internal link systems</span></li>
+              <li><span class="mark">✓</span><span>Canonical control &amp; duplication management</span></li>
+              <li><span class="mark">✓</span><span>Intent-mapped information architecture</span></li>
+              <li><span class="mark">✓</span><span>Consolidated authority</span></li>
             </ul>
           </div>
         </div>
-        <p class="mt-12 text-gray-500 text-sm italic">Without these, you get more pages... and less impact.</p>
+        <p class="muted" style="font-style:italic;margin-top:1.5rem;">Without these, you get more pages... and less impact.</p>
       </div>
     </section>
-    <!-- END: Systems Section -->
 
-    <!-- BEGIN: How I Work -->
-    <section class="py-20 bg-accentBg">
-      <div class="section-container">
-        <h2 class="text-3xl font-bold mb-4">What I Build: Revenue-Aligned Organic Infrastructure</h2>
-        <p class="text-gray-400 mb-12">Search mechanics. Site structure. Commercial intent. Attribution. All engineered together — not treated as silos.</p>
-        <div class="space-y-16">
-          <div data-purpose="work-block-1">
-            <h3 class="text-xl font-bold mb-4 text-white">1) Architecture &amp; Crawl Governance</h3>
-            <ul class="space-y-3 text-gray-400 border-l border-white/10 pl-6 ml-2">
-              <li>• Re-structured internal linking to eliminate orphaned product pages</li>
-              <li>• Consolidated duplicate URL variants via canonical + parameter controls</li>
-              <li>• Worked directly with engineering to fix crawl path inefficiencies</li>
-              <li>• Implemented release checklists so redesigns stop breaking indexation</li>
-            </ul>
-            <p class="mt-4 text-xs font-mono text-brandYellow/80 uppercase">Result: Authority consolidation and faster discovery of high-intent pages.</p>
-          </div>
-          <div data-purpose="work-block-2">
-            <h3 class="text-xl font-bold mb-4 text-white">2) Semantic Cluster Design Built Around Revenue</h3>
-            <ul class="space-y-3 text-gray-400 border-l border-white/10 pl-6 ml-2">
-              <li>• Designed multi-pillar clusters (AI, CDP, Lifecycle) aligned to product themes</li>
-              <li>• Mapped problem-aware → solution-aware → decision-stage queries</li>
-              <li>• Built bottom-funnel FAQ systems targeting buying objections</li>
-              <li>• Expanded comparison and long-tail micro-pages (1-3 and 4-10 positions)</li>
-            </ul>
-            <p class="mt-4 text-xs font-mono text-brandYellow/80 uppercase">Result: Traffic that converts — not just traffic that reports well.</p>
-          </div>
-          <div data-purpose="work-block-3">
-            <h3 class="text-xl font-bold mb-4 text-white">3) Revenue Attribution That Survives Scrutiny</h3>
-            <ul class="space-y-3 text-gray-400 border-l border-white/10 pl-6 ml-2">
-              <li>• Built first-touch opportunity tracking inside GA4 + CRM</li>
-              <li>• Mapped organic sessions → pipeline → ACV influence</li>
-              <li>• Created monthly pacing dashboards for growth + sales alignment</li>
-            </ul>
-            <p class="mt-4 text-xs font-mono text-brandYellow/80 uppercase">Result: We could answer "What is organic worth?" With evidence — not vibes.</p>
-          </div>
+    <section class="cs-section cs-section--alt">
+      <div class="wrap wrap--content">
+        <h2>What I build: revenue-aligned organic infrastructure</h2>
+        <p style="margin-bottom:2rem;">Search mechanics. Site structure. Commercial intent. Attribution. All engineered together — not treated as silos.</p>
+        <div class="cs-work-block">
+          <h3>1) Architecture &amp; crawl governance</h3>
+          <ul>
+            <li>Re-structured internal linking to eliminate orphaned product pages</li>
+            <li>Consolidated duplicate URL variants via canonical + parameter controls</li>
+            <li>Worked directly with engineering to fix crawl path inefficiencies</li>
+            <li>Implemented release checklists so redesigns stop breaking indexation</li>
+          </ul>
+          <p class="cs-result-tag">Result: authority consolidation and faster discovery of high-intent pages.</p>
+        </div>
+        <div class="cs-work-block">
+          <h3>2) Semantic cluster design built around revenue</h3>
+          <ul>
+            <li>Designed multi-pillar clusters (AI, CDP, Lifecycle) aligned to product themes</li>
+            <li>Mapped problem-aware → solution-aware → decision-stage queries</li>
+            <li>Built bottom-funnel FAQ systems targeting buying objections</li>
+            <li>Expanded comparison and long-tail micro-pages (1–3 and 4–10 positions)</li>
+          </ul>
+          <p class="cs-result-tag">Result: traffic that converts — not just traffic that reports well.</p>
+        </div>
+        <div class="cs-work-block">
+          <h3>3) Revenue attribution that survives scrutiny</h3>
+          <ul>
+            <li>Built first-touch opportunity tracking inside GA4 + CRM</li>
+            <li>Mapped organic sessions → pipeline → ACV influence</li>
+            <li>Created monthly pacing dashboards for growth + sales alignment</li>
+          </ul>
+          <p class="cs-result-tag">Result: we could answer "what is organic worth?" with evidence — not vibes.</p>
         </div>
       </div>
     </section>
-    <!-- END: How I Work -->
 
-    <!-- BEGIN: Case Study -->
-    <section class="py-24" id="case-study">
-      <div class="section-container">
-        <h2 class="text-3xl font-bold mb-6">One Battle-Tested Moment</h2>
-        <p class="text-gray-300 mb-6">During a site redesign, we identified crawl-path issues suppressing indexation of high-intent product pages.</p>
-        <p class="text-gray-400 mb-8">Instead of reacting after launch, I worked directly with engineering to restructure navigation and internal linking before release — so we avoided the "rankings drop → fire drill → months of recovery" cycle.</p>
-        <div class="quote-block mb-16">
-          <p class="text-white">"That's the difference between SEO as a channel... and SEO as infrastructure."</p>
-        </div>
-        <div class="bg-cardBg border border-white/10 p-8 rounded-custom">
-          <h3 class="text-2xl font-bold mb-8">Case Study: Competitive Martech (CDP + AI Decisioning)</h3>
-          <div class="grid md:grid-cols-2 gap-8 mb-12">
+    <section class="cs-section" id="case-study">
+      <div class="wrap wrap--content">
+        <h2>One battle-tested moment</h2>
+        <p>During a site redesign, we identified crawl-path issues suppressing indexation of high-intent product pages.</p>
+        <p>Instead of reacting after launch, I worked directly with engineering to restructure navigation and internal linking before release — so we avoided the "rankings drop → fire drill → months of recovery" cycle.</p>
+        <blockquote class="quote-block">
+          <p>"That's the difference between SEO as a channel... and SEO as infrastructure."</p>
+        </blockquote>
+        <div class="cs-case-card">
+          <h3>Case study: competitive martech (CDP + AI decisioning)</h3>
+          <div class="cs-case-grid">
             <div>
-              <h4 class="text-brandYellow uppercase text-xs font-bold mb-4">Challenges</h4>
-              <ul class="space-y-2 text-gray-400 text-sm">
-                <li>• Volatile rankings</li>
-                <li>• Limited bottom-funnel capture</li>
-                <li>• No structured authority consolidation</li>
+              <h4>Challenges</h4>
+              <ul class="cs-list" style="flex-direction:column;">
+                <li><span class="mark">•</span><span>Volatile rankings</span></li>
+                <li><span class="mark">•</span><span>Limited bottom-funnel capture</span></li>
+                <li><span class="mark">•</span><span>No structured authority consolidation</span></li>
               </ul>
             </div>
             <div>
-              <h4 class="text-brandYellow uppercase text-xs font-bold mb-4">Built</h4>
-              <ul class="space-y-2 text-gray-400 text-sm">
-                <li>• Multi-pillar semantic architecture</li>
-                <li>• Internal equity funneling system</li>
-                <li>• FAQ decision-capture framework</li>
+              <h4>Built</h4>
+              <ul class="cs-list" style="flex-direction:column;">
+                <li><span class="mark">•</span><span>Multi-pillar semantic architecture</span></li>
+                <li><span class="mark">•</span><span>Internal equity funneling system</span></li>
+                <li><span class="mark">•</span><span>FAQ decision-capture framework</span></li>
               </ul>
             </div>
           </div>
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-white/10">
-            <div>
-              <span class="block text-2xl font-bold text-white">+1,828%</span>
-              <span class="text-[10px] text-gray-500 uppercase tracking-tighter">Traffic Growth</span>
-            </div>
-            <div>
-              <span class="block text-2xl font-bold text-white">40–55</span>
-              <span class="text-[10px] text-gray-500 uppercase tracking-tighter">Organic Opps / Month</span>
-            </div>
-            <div>
-              <span class="block text-2xl font-bold text-white">648</span>
-              <span class="text-[10px] text-gray-500 uppercase tracking-tighter">Leads (One Asset)</span>
-            </div>
-            <div>
-              <span class="block text-2xl font-bold text-white">$2M–$3.5M</span>
-              <span class="text-[10px] text-gray-500 uppercase tracking-tighter">ACV Influenced</span>
-            </div>
+          <div class="cs-case-metrics">
+            <div><span class="val">+1,828%</span><span class="lbl">Traffic growth</span></div>
+            <div><span class="val">40–55</span><span class="lbl">Organic opps / month</span></div>
+            <div><span class="val">648</span><span class="lbl">Leads (one asset)</span></div>
+            <div><span class="val">$2M–$3.5M</span><span class="lbl">ACV influenced</span></div>
           </div>
-          <div class="mt-12 text-center">
-            <a class="btn-primary w-full md:w-auto" href="/seo-architecture/Craig-Dennis-SEO-CV-Case-Study.pdf" download="Craig-Dennis-SEO-CV-Case-Study.pdf">View Full Case Study</a>
-          </div>
+          <p style="text-align:center;margin-top:2rem;">
+            <a class="btn btn-primary" href="/seo-architecture/Craig-Dennis-SEO-CV-Case-Study.pdf" download="Craig-Dennis-SEO-CV-Case-Study.pdf">View full case study (PDF)</a>
+          </p>
         </div>
       </div>
     </section>
-    <!-- END: Case Study -->
 
-    <!-- BEGIN: Visual Proof -->
-    <section class="py-20 bg-accentBg">
-      <div class="section-container text-center">
-        <h2 class="text-3xl font-bold mb-4">Visual Proof: Semantic Cluster Architecture</h2>
-        <p class="text-gray-400 mb-12">Using structural maps to reinforce "architecture" instantly.</p>
-        <div class="aspect-video bg-darkBg border-2 border-dashed border-white/10 flex items-center justify-center rounded-custom overflow-hidden">
-          <div class="text-center p-8">
-            <div class="inline-block p-4 rounded-full bg-white/5 mb-4">
-              <svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-            </div>
-            <p class="text-sm text-gray-500 italic">[Custom Semantic Architecture Diagram Placement]</p>
-          </div>
+    <section class="cs-section cs-section--alt">
+      <div class="wrap wrap--content" style="text-align:center;">
+        <h2>Visual proof: semantic cluster architecture</h2>
+        <p style="margin-bottom:1.5rem;">Using structural maps to reinforce "architecture" instantly.</p>
+        <div class="cs-placeholder">[Custom semantic architecture diagram placement]</div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <div class="wrap wrap--content">
+        <h2>Objections — answered</h2>
+        <div class="cs-objection">
+          <h3>"We've hired SEO before."</h3>
+          <p>If it wasn't tied to architecture and attribution, it couldn't compound. I start with system design. Content scales after the structure is sound.</p>
+        </div>
+        <div class="cs-objection">
+          <h3>"Is this agency-style SEO?"</h3>
+          <p>No. Agencies ship audits. I embed with product, engineering, and revenue teams. Architecture requires governance — not PDFs.</p>
+        </div>
+        <div class="cs-objection">
+          <h3>"What about AI and zero-click?"</h3>
+          <p>Clicks are changing. That's why resilience matters: authority consolidation, bottom-funnel ownership, and structural clarity reduce volatility risk. Resilience is engineered.</p>
         </div>
       </div>
     </section>
-    <!-- END: Visual Proof -->
 
-    <!-- BEGIN: Objections Section -->
-    <section class="py-24">
-      <div class="section-container">
-        <h2 class="text-3xl font-bold mb-12">Objections — Answered</h2>
-        <div class="space-y-6">
-          <div class="bg-cardBg border border-white/10 p-6 rounded-custom">
-            <h3 class="font-bold text-white mb-2">"We've hired SEO before."</h3>
-            <p class="text-gray-400 text-sm">If it wasn't tied to architecture and attribution, it couldn't compound. I start with system design. Content scales after the structure is sound.</p>
-          </div>
-          <div class="bg-cardBg border border-white/10 p-6 rounded-custom">
-            <h3 class="font-bold text-white mb-2">"Is this agency-style SEO?"</h3>
-            <p class="text-gray-400 text-sm">No. Agencies ship audits. I embed with product, engineering, and revenue teams. Architecture requires governance — not PDFs.</p>
-          </div>
-          <div class="bg-cardBg border border-white/10 p-6 rounded-custom">
-            <h3 class="font-bold text-white mb-2">"What about AI and zero-click?"</h3>
-            <p class="text-gray-400 text-sm">Clicks are changing. That's why resilience matters: authority consolidation, bottom-funnel ownership, and structural clarity reduce volatility risk. Resilience is engineered.</p>
-          </div>
+    <section class="cs-section cs-section--alt">
+      <div class="wrap wrap--content">
+        <h2>Tools &amp; execution stack</h2>
+        <p><strong>Ahrefs · Google Search Console · GA4 · Salesforce / HubSpot · Schema implementation · Internal linking audits · Crawl diagnostics · Semantic mapping frameworks · Release governance</strong></p>
+        <p class="muted" style="font-style:italic;">Strategy is only credible if it ships.</p>
+      </div>
+    </section>
+
+    <section class="cs-cta cs-section--alt" id="download-cv">
+      <div class="wrap wrap--content">
+        <h2>Next step</h2>
+        <p>If you're hiring for Senior SEO / Head of Organic / Growth Systems and want someone who can own the system end-to-end: let's talk.</p>
+        <div class="btn-row" style="justify-content:center;">
+          <a class="btn btn-primary btn-lg" href="https://calendly.com/craigdennis1990/1-1-consultation" target="_blank" rel="noopener">Start a conversation</a>
+          <a class="btn btn-ghost btn-lg" href="/seo-architecture/Craig-Dennis-SEO-CV-Case-Study.pdf" download="Craig-Dennis-SEO-CV-Case-Study.pdf">Download SEO CV</a>
         </div>
       </div>
     </section>
-    <!-- END: Objections Section -->
-
-    <!-- BEGIN: Tools & Execution -->
-    <section class="py-20 border-t border-white/5">
-      <div class="section-container">
-        <h2 class="text-2xl font-bold mb-6">Tools &amp; Execution Stack</h2>
-        <p class="text-gray-300 font-medium mb-4">Ahrefs · Google Search Console · GA4 · Salesforce / HubSpot · Schema implementation · Internal linking audits · Crawl diagnostics · Semantic mapping frameworks · Release governance</p>
-        <p class="text-xs text-gray-500 italic">Strategy is only credible if it ships.</p>
-      </div>
-    </section>
-    <!-- END: Tools & Execution -->
-
-    <!-- BEGIN: Final CTA -->
-    <section class="py-32 bg-accentBg" id="download-cv">
-      <div class="section-container text-center">
-        <h2 class="text-4xl font-extrabold mb-6">Next Step</h2>
-        <p class="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
-          If you're hiring for Senior SEO / Head of Organic / Growth Systems and want someone who can own the system end-to-end: Let's talk.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a class="btn-primary px-8 py-4 text-lg" href="https://calendly.com/craigdennis1990/1-1-consultation" target="_blank" rel="noopener">Start a Conversation</a>
-          <a class="btn-secondary px-8 py-4 text-lg" href="/seo-architecture/Craig-Dennis-SEO-CV-Case-Study.pdf" download="Craig-Dennis-SEO-CV-Case-Study.pdf">Download SEO CV</a>
-        </div>
-      </div>
-    </section>
-    <!-- END: Final CTA -->
   </main>
 
-  <!-- BEGIN: Footer -->
-  <footer class="py-12 border-t border-white/5">
-    <div class="section-container text-center">
-      <p class="font-bold mb-2"><a href="../" class="text-white hover:text-gray-200">craigdennis.me</a></p>
-      <p class="text-xs text-gray-600">SEO Architecture — From volatile rankings to predictable pipeline.</p>
+  <footer>
+    <div class="wrap foot foot--center">
+      <div class="foot-brand">craigdennis<em>.me</em></div>
+      <p>SEO architecture — from volatile rankings to predictable pipeline.</p>
     </div>
   </footer>
-  <!-- END: Footer -->
+
+  <script src="/main.js"></script>
 </body>
 </html>

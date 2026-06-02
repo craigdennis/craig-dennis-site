@@ -7,6 +7,7 @@ Static site for Craig Dennis — B2B SaaS organic growth consulting (SEO, conten
 | Path | Purpose |
 |------|---------|
 | `/` | Marketing homepage — services overview, proof, 30-day sprint CTA |
+| `/work/` | Portfolio — Hightouch case studies, published writing, product builds |
 | `/services/` | Services & pricing — 30-Day Sprint ($5k), retainer, à la carte |
 | `/services/#sprint` | Primary offer: The 30-Day Sprint |
 | `/sprint/` | Redirects to `/services/#sprint` (legacy URL) |
@@ -67,3 +68,4 @@ Open the URL shown (e.g. http://localhost:3000).
 
 - Replace the placeholder testimonial in `index.html` (`<!-- TESTIMONIAL: ... -->` block).
 - Add client logos under `images/logos/` if you have permission (strip is text-only for now).
+- On `/work/`: replace `<!-- PUBLISHED: replace -->` article cards with live URLs; confirm WriteSaaS URL (`<!-- WRITESAAS: ... -->`) and GetGainStrong metrics (`<!-- GETGAINSTRONG: ... -->`).

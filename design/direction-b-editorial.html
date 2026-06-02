@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Craig Dennis — Editorial (Forest)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script src="image-slot.js"></script>
+<style>
+  :root {
+    --ink: oklch(0.27 0.012 145);
+    --ink-soft: oklch(0.44 0.012 145);
+    --ink-faint: oklch(0.58 0.01 145);
+    --forest: oklch(0.42 0.075 152);
+    --forest-deep: oklch(0.33 0.06 152);
+    --forest-tint: oklch(0.95 0.025 152);
+    --line: oklch(0.89 0.012 110);
+    --bg: oklch(0.985 0.008 95);
+    --card: oklch(0.995 0.004 95);
+    --display: "Newsreader", Georgia, serif;
+    --body: "Hanken Grotesk", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; line-height: 1.55; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 44px; }
+  a { color: inherit; text-decoration: none; }
+
+  header { position: sticky; top: 0; z-index: 50; background: oklch(0.985 0.008 95 / 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 78px; }
+  .logo { font-family: var(--display); font-weight: 500; font-size: 22px; letter-spacing: -0.01em; }
+  .logo em { font-style: italic; color: var(--forest); }
+  .nav-links { display: flex; align-items: center; gap: 34px; }
+  .nav-links a { font-size: 15px; color: var(--ink-soft); font-weight: 500; transition: color .15s; }
+  .nav-links a:hover { color: var(--forest); }
+  .btn { font-family: var(--body); font-weight: 600; font-size: 15px; border: none; cursor: pointer; border-radius: 8px; padding: 11px 21px; transition: transform .12s, background .2s; display: inline-flex; align-items: center; gap: 8px; }
+  .btn-primary { background: var(--forest); color: oklch(0.97 0.02 95); }
+  .btn-primary:hover { background: var(--forest-deep); transform: translateY(-1px); }
+  .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink-faint); }
+  .btn-ghost:hover { border-color: var(--forest); color: var(--forest); }
+  .btn-lg { padding: 15px 28px; font-size: 16.5px; }
+
+  /* hero */
+  .hero { padding: 92px 0 80px; }
+  .hero-grid { display: grid; grid-template-columns: 1fr 360px; gap: 60px; align-items: center; }
+  .eyebrow { font-family: var(--body); font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--forest); margin-bottom: 26px; }
+  h1.hero-title { font-family: var(--display); font-weight: 500; font-size: 68px; line-height: 1.02; letter-spacing: -0.018em; margin-bottom: 28px; }
+  h1.hero-title em { font-style: italic; color: var(--forest); }
+  .hero-sub { font-size: 19.5px; line-height: 1.6; color: var(--ink-soft); max-width: 520px; margin-bottom: 36px; }
+  .hero-sub strong { color: var(--ink); font-weight: 600; }
+  .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .portrait-col { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+  .portrait-col image-slot { width: 300px; height: 300px; box-shadow: 0 30px 60px -26px oklch(0.33 0.06 152 / 0.5); }
+  .portrait-cap { text-align: center; }
+  .portrait-cap .name { font-family: var(--display); font-style: italic; font-size: 19px; color: var(--ink); }
+  .portrait-cap .role { font-size: 13.5px; color: var(--ink-faint); margin-top: 3px; }
+
+  /* trust */
+  .trust { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 30px 0; }
+  .trust-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+  .trust-label { font-family: var(--display); font-style: italic; font-size: 16px; color: var(--ink-faint); }
+  .trust-logos { display: flex; gap: 40px; flex-wrap: wrap; }
+  .trust-logos span { font-weight: 600; font-size: 16px; color: var(--ink-soft); }
+
+  /* stats */
+  .stats { padding: 72px 0 28px; }
+  .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .stat-card { padding: 8px 36px; border-left: 1px solid var(--line); }
+  .stat-card:first-child { border-left: none; padding-left: 0; }
+  .stat-num { font-family: var(--display); font-weight: 500; font-size: 56px; letter-spacing: -0.02em; color: var(--forest); line-height: 1; }
+  .stat-label { font-size: 14px; color: var(--ink-soft); margin-top: 12px; }
+
+  .sec { padding: 76px 0; }
+  .sec-head { max-width: 640px; margin-bottom: 48px; }
+  .sec-kicker { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--forest); margin-bottom: 16px; }
+  h2.sec-title { font-family: var(--display); font-weight: 500; font-size: 42px; letter-spacing: -0.015em; line-height: 1.08; margin-bottom: 16px; }
+  h2.sec-title em { font-style: italic; color: var(--forest); }
+  .sec-lead { font-size: 18px; color: var(--ink-soft); }
+
+  /* problems - numbered editorial list */
+  .prob-list { display: flex; flex-direction: column; }
+  .prob-item { display: grid; grid-template-columns: 64px 1fr 1.3fr; gap: 32px; padding: 36px 0; border-top: 1px solid var(--line); align-items: baseline; }
+  .prob-item:last-child { border-bottom: 1px solid var(--line); }
+  .prob-no { font-family: var(--display); font-style: italic; font-size: 26px; color: var(--forest); }
+  .prob-item h3 { font-family: var(--display); font-weight: 500; font-size: 26px; letter-spacing: -0.01em; line-height: 1.15; }
+  .prob-item p { font-size: 16.5px; color: var(--ink-soft); line-height: 1.6; }
+
+  /* services */
+  .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--card); }
+  .svc-card { padding: 38px 34px; border-right: 1px solid var(--line); display: flex; flex-direction: column; transition: background .18s; }
+  .svc-card:last-child { border-right: none; }
+  .svc-card:hover { background: var(--forest-tint); }
+  .svc-no { font-family: var(--display); font-style: italic; font-size: 20px; color: var(--forest); margin-bottom: 20px; }
+  .svc-card h3 { font-family: var(--display); font-weight: 500; font-size: 24px; letter-spacing: -0.01em; margin-bottom: 14px; line-height: 1.15; }
+  .svc-card p { font-size: 15.5px; color: var(--ink-soft); line-height: 1.6; flex: 1; margin-bottom: 24px; }
+  .svc-link { font-weight: 600; font-size: 15px; color: var(--forest); display: inline-flex; gap: 7px; transition: gap .15s; }
+  .svc-card:hover .svc-link { gap: 11px; }
+  .sec-foot { text-align: center; margin-top: 40px; }
+  .sec-foot a { font-family: var(--display); font-style: italic; font-size: 18px; color: var(--forest); }
+
+  /* proof */
+  .proof { background: var(--forest); color: oklch(0.96 0.02 95); border-radius: 20px; padding: 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: center; }
+  .proof-tag { font-family: var(--body); font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: oklch(0.82 0.06 152); margin-bottom: 18px; }
+  .proof-num { font-family: var(--display); font-weight: 500; font-size: 88px; line-height: 0.9; letter-spacing: -0.03em; margin-bottom: 22px; }
+  .proof p { font-size: 17px; line-height: 1.6; color: oklch(0.92 0.02 152); margin-bottom: 18px; }
+  .proof-meta { font-size: 14px; color: oklch(0.8 0.04 152); margin-bottom: 26px; }
+  .proof-link { font-family: var(--display); font-style: italic; font-size: 18px; color: #fff; border-bottom: 1px solid oklch(0.82 0.06 152); padding-bottom: 3px; }
+  .proof-quote { background: oklch(0.36 0.065 152); border-radius: 14px; padding: 34px; }
+  .proof-quote .q { font-family: var(--display); font-style: italic; font-size: 22px; color: #fff; line-height: 1.45; margin-bottom: 18px; }
+  .proof-quote .who { font-size: 14px; color: oklch(0.8 0.04 152); }
+
+  .cta-band { padding: 80px 0 96px; }
+  .cta-box { text-align: center; max-width: 680px; margin: 0 auto; }
+  .cta-box h2 { font-family: var(--display); font-weight: 500; font-size: 52px; letter-spacing: -0.02em; line-height: 1.04; margin-bottom: 20px; }
+  .cta-box h2 em { font-style: italic; color: var(--forest); }
+  .cta-box p { font-size: 18.5px; color: var(--ink-soft); max-width: 520px; margin: 0 auto 34px; }
+
+  footer { border-top: 1px solid var(--line); padding: 54px 0; }
+  .foot { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; }
+  .foot-brand { font-family: var(--display); font-size: 20px; }
+  .foot-brand em { font-style: italic; color: var(--forest); }
+  .foot p { font-size: 14.5px; color: var(--ink-faint); margin-top: 10px; max-width: 320px; }
+  .foot-links { display: flex; gap: 26px; flex-wrap: wrap; }
+  .foot-links a { font-size: 14.5px; color: var(--ink-soft); font-weight: 500; }
+  .foot-links a:hover { color: var(--forest); }
+
+  @media (max-width: 920px) {
+    .hero-grid, .proof, .stat-row, .svc-grid { grid-template-columns: 1fr; }
+    .prob-item { grid-template-columns: 40px 1fr; }
+    .prob-item p { grid-column: 2; }
+    h1.hero-title { font-size: 48px; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="logo">craigdennis<em>.me</em></div>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#">Leakage Scan</a>
+        <button class="btn btn-primary">Book a call</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">SEO · Content · AI-search systems</div>
+        <h1 class="hero-title">Organic growth that <em>compounds.</em></h1>
+        <p class="hero-sub">I build SEO, content, and AI-search systems for B2B SaaS that turn organic traffic into pipeline. At Hightouch that meant <strong>1,828% organic growth</strong> and <strong>$2–3.5M in monthly ACV influenced.</strong></p>
+        <div class="hero-cta">
+          <button class="btn btn-primary btn-lg">Start a 30-day sprint</button>
+          <a href="#work" class="btn btn-ghost btn-lg">See the work →</a>
+        </div>
+      </div>
+      <div class="portrait-col">
+        <image-slot id="craig-portrait-b" shape="circle" placeholder="Drop your headshot"></image-slot>
+        <div class="portrait-cap">
+          <div class="name">Craig Dennis</div>
+          <div class="role">Organic growth for B2B SaaS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="wrap trust-inner">
+      <span class="trust-label">Trusted by teams at</span>
+      <div class="trust-logos"><span>Hightouch</span><span>Userpilot</span><span>DataStax</span><span>Global Payments</span></div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="wrap stat-row">
+      <div class="stat-card"><div class="stat-num">1,828%</div><div class="stat-label">Organic traffic growth</div></div>
+      <div class="stat-card"><div class="stat-num">$2–3.5M</div><div class="stat-label">Monthly ACV influenced</div></div>
+      <div class="stat-card"><div class="stat-num">87–100%</div><div class="stat-label">LLM sentiment, up from 30–40% baseline</div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">The gap</div>
+        <h2 class="sec-title">Most SEO never reaches the <em>revenue conversation.</em></h2>
+      </div>
+      <div class="prob-list">
+        <div class="prob-item">
+          <div class="prob-no">01</div>
+          <h3>Traffic that never becomes pipeline</h3>
+          <p>Most SEO stops at rankings and sessions. I tie organic to first-touch opportunity tracking, so growth shows up in ACV — not a dashboard nobody acts on.</p>
+        </div>
+        <div class="prob-item">
+          <div class="prob-no">02</div>
+          <h3>Content that AI search ignores</h3>
+          <p>Ranking in Google no longer gets you cited by ChatGPT, Perplexity, or Claude. I structure content to get retrieved — and measure how models describe you.</p>
+        </div>
+        <div class="prob-item">
+          <div class="prob-no">03</div>
+          <h3>No system, just output</h3>
+          <p>I build the architecture, the AI workflow, and the dashboard — so growth keeps compounding long after I leave the engagement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="services" style="padding-top:20px;">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">Services</div>
+        <h2 class="sec-title">Three systems that <em>compound.</em></h2>
+        <p class="sec-lead">Architecture, content, and AI visibility — built to work together, scoped to pipeline.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-card">
+          <div class="svc-no">i.</div>
+          <h3>SEO architecture &amp; strategy</h3>
+          <p>Revenue-aligned organic infrastructure — crawl governance, semantic clusters, and attribution that survives scrutiny.</p>
+          <a href="#" class="svc-link">View work →</a>
+        </div>
+        <div class="svc-card">
+          <div class="svc-no">ii.</div>
+          <h3>Content marketing</h3>
+          <p>Research-driven demand engines, case studies, and content operations built for pipeline — not vanity traffic.</p>
+          <a href="#" class="svc-link">View work →</a>
+        </div>
+        <div class="svc-card">
+          <div class="svc-no">iii.</div>
+          <h3>AI / LLM visibility (AEO)</h3>
+          <p>Entity-level optimization and measurement so ChatGPT, Perplexity, and Claude describe your brand accurately.</p>
+          <a href="#" class="svc-link">View work →</a>
+        </div>
+      </div>
+      <div class="sec-foot"><a href="#">Overview of all services →</a></div>
+    </div>
+  </section>
+
+  <section class="sec" id="work">
+    <div class="wrap">
+      <div class="proof">
+        <div>
+          <div class="proof-tag">Hightouch</div>
+          <div class="proof-num">1,828%</div>
+          <p>Organic traffic growth with revenue-aligned SEO architecture, semantic clusters, and first-touch opportunity tracking in GA4 + CRM.</p>
+          <div class="proof-meta">$2–3.5M monthly ACV influenced · 40–55 organic opportunities per month</div>
+          <a href="#" class="proof-link">Read the case study →</a>
+        </div>
+        <div class="proof-quote">
+          <div class="q">“Testimonial coming soon.”</div>
+          <div class="who">Name, Title — Company</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <div class="cta-box">
+        <h2>Ready to compound <em>organic growth?</em></h2>
+        <p>Start a focused 30-day sprint — SEO, content, and AI-search systems scoped to pipeline, not vanity metrics.</p>
+        <button class="btn btn-primary btn-lg">Start a 30-day sprint</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <div class="foot-brand">craigdennis<em>.me</em></div>
+        <p>B2B SaaS organic growth — SEO, content, and AI-search systems.</p>
+      </div>
+      <div class="foot-links">
+        <a href="#services">Services</a>
+        <a href="#">Evaluation Sprint</a>
+        <a href="#">Leakage Scan</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
