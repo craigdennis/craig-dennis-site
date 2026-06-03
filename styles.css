@@ -67,14 +67,14 @@ header {
   align-items: center;
   gap: clamp(1rem, 3vw, 2.125rem);
 }
-.nav-links a {
+.nav-links a:not(.btn) {
   font-size: 15px;
   color: var(--ink-soft);
   font-weight: 500;
   transition: color 0.15s;
 }
-.nav-links a:hover,
-.nav-links a[aria-current="page"] { color: var(--forest); }
+.nav-links a:not(.btn):hover,
+.nav-links a:not(.btn)[aria-current="page"] { color: var(--forest); }
 
 .menu-toggle {
   display: none;
