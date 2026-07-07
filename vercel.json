@@ -1,6 +1,7 @@
 {
   "buildCommand": "npm run build",
   "installCommand": "npm install",
+  "outputDirectory": ".",
   "framework": null,
   "redirects": [
     { "source": "/sprint", "destination": "/services/#sprint", "permanent": true },
