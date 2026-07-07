@@ -6,8 +6,6 @@ tags: [seo, content-strategy, claude-code, ai-workflows]
 draft: false
 ---
 
-# I turned Claude Code into a 7-stage content pipeline — and the whole "database" is just Markdown files
-
 I write content for a few sites, and the part I hate isn't the writing — it's everything around it. Finding what already ranks. Checking what I've said elsewhere on my own site so I don't contradict myself or miss an internal link. Building an outline that argues something instead of restating the SERP. Then formatting the final thing for a CMS with metadata, a slug, and schema.
 
 So I built a pipeline for it. Not an app — a set of **Claude Code Skills** that take a single topic through seven small, deliberate stages to a publish-ready article. No database, no backend, no dashboard. Just a folder of dated Markdown files that each stage reads from and writes to.
