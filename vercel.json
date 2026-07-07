@@ -1,4 +1,6 @@
 {
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
   "framework": null,
   "redirects": [
     { "source": "/sprint", "destination": "/services/#sprint", "permanent": true },

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NB3JHD14FK"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -10,12 +10,19 @@
     gtag('js', new Date());
     gtag('config', 'G-NB3JHD14FK');
   </script>
-  <meta name="description" content="Thanks — Leakage Scan application received." />
-  <title>Thanks — Craig Dennis</title>
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}" />
+  <link rel="canonical" href="{{canonicalUrl}}" />
+  <meta property="og:title" content="{{ogTitle}}" />
+  <meta property="og:description" content="{{description}}" />
+  <meta property="og:type" content="{{ogType}}" />
+  <meta property="og:url" content="{{canonicalUrl}}" />
+  <meta property="og:site_name" content="Craig Dennis" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  {{extraHead}}
 </head>
 <body>
   <header>
@@ -33,21 +40,17 @@
     </div>
   </header>
 
-  <main>
-    <section class="section section--cta" id="thanks">
-      <div class="wrap wrap--narrow">
-        <p class="section-lead" style="text-align:center;font-size:1.25rem;">Thanks — if you qualify, we'll reach out to schedule the diagnostic.</p>
-      </div>
-    </section>
-  </main>
+  {{body}}
 
   <footer>
     <div class="wrap foot foot--center">
-      <div class="foot-brand">craigdennis<em>.me</em></div>
-      <p>Evaluation Revenue Leakage Scan™</p>
+      <div>
+        <div class="foot-brand">craigdennis<em>.me</em></div>
+        <p>B2B SaaS organic growth — SEO, content, and AI-search systems.</p>
+      </div>
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="/main.js"></script>
 </body>
 </html>

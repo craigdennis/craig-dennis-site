@@ -15,6 +15,7 @@ Static site for Craig Dennis — B2B SaaS organic growth consulting (SEO, conten
 | `/content-demand/` | Content & demand generation case study + CV |
 | `/ai-growth/` | AI / LLM visibility case study + CV |
 | `/leakage-scan.html` | Evaluation Revenue Leakage Scan™ |
+| `/blog/` | Blog — markdown posts built from `content/blog/` |
 | `/contact/` | Qualifying contact form (Tally embed) |
 | `/contact/thanks/` | Post-submit thank you |
 
@@ -52,7 +53,43 @@ Homepage primary CTA: **Start a 30-day sprint** → `/contact/`. Services page h
 
 1. Push to GitHub.
 2. [vercel.com](https://vercel.com) → **Add New** → **Project** → import repo.
-3. Deploy (no build step required).
+3. Deploy (`npm run build` runs automatically on Vercel).
+
+## Blog
+
+Posts live in `content/blog/` as markdown files with YAML frontmatter:
+
+```markdown
+---
+title: "Post title"
+description: "Meta description for SEO."
+date: 2026-07-07
+tags: [seo, b2b-saas]
+draft: false
+---
+
+Your markdown content here...
+```
+
+Build blog pages:
+
+```bash
+npm install
+npm run build
+```
+
+- Listing: `/blog/`
+- Posts: `/blog/your-filename/` (slug defaults to filename without `.md`)
+- RSS: `/blog/feed.xml`
+- Set `draft: true` to skip a post at build time
+
+Watch mode while writing:
+
+```bash
+npm run dev
+```
+
+Generated HTML is written to `blog/` (gitignored). Vercel runs `npm run build` on deploy.
 
 ## Domain (craigdennis.me)
 
@@ -62,10 +99,12 @@ Homepage primary CTA: **Start a 30-day sprint** → `/contact/`. Services page h
 ## Local preview
 
 ```bash
+npm install
+npm run build
 npx serve .
 ```
 
-Open the URL shown (e.g. http://localhost:3000).
+Open the URL shown (e.g. http://localhost:3000). Run `npm run build` before previewing blog pages locally.
 
 ## Edit CTAs
 

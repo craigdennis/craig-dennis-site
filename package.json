@@ -1,0 +1,12 @@
+{
+  "name": "craig-dennis-site",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-blog.js",
+    "dev": "node scripts/build-blog.js --watch"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^15.0.6"
+  }
+}
